@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:major_project/FruitView.dart';
+import 'package:major_project/LogOut.dart';
 import 'package:major_project/MoreView.dart';
 import 'package:major_project/SpicesView.dart';
 import 'package:major_project/VegetableView.dart';
@@ -24,61 +26,122 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(100.0),
+        child: AppBar(
+          leading: Builder(
+            builder: (context) => Padding(
+              padding: const EdgeInsets.only(top: 6.0, left: 3),
+              child: IconButton(
+                icon: Icon(
+                  Icons.menu_rounded,
+                  color: Colors.blue,
+                  size: 30,
+                ),
+                onPressed: () => Scaffold.of(context).openDrawer(),
+              ),
+            ),
+          ),
+          title: Padding(
+            padding: const EdgeInsets.only(top: 13.0),
+            child: Text(
+              "GROCERIE",
+              style: GoogleFonts.josefinSans(
+                  fontSize: 33,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.blue[700]),
+            ),
+          ),
+          elevation: 0,
+          centerTitle: true,
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(right: 10.0, top: 7),
+              child: Container(
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.grey.withOpacity(0.3),
+                          blurRadius: 6.0,
+                          spreadRadius: 4.0,
+                          offset: Offset(0.0, 0.3))
+                    ],
+                    color: Colors.blue[300],
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                        image: AssetImage("assets/man.png"),
+                        fit: BoxFit.contain)),
+              ),
+            )
+          ],
+        ),
+      ),
+      drawer: Drawer(),
       body: SafeArea(
         child: ListView(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 10),
-              child: Container(
-                height: 50,
-                width: MediaQuery.of(context).size.width,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 10.0,
-                      ),
-                      child: Icon(
-                        Icons.menu,
-                        size: 30,
-                        color: Colors.blue,
-                      ),
-                    ),
-                    Text(
-                      "GROCERIE",
-                      style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.w900,
-                          color: Colors.blue[700]),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 10.0),
-                      child: Container(
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.grey.withOpacity(0.3),
-                                  blurRadius: 6.0,
-                                  spreadRadius: 4.0,
-                                  offset: Offset(0.0, 0.3))
-                            ],
-                            color: Colors.blue[300],
-                            shape: BoxShape.circle,
-                            image: DecorationImage(
-                                image: AssetImage("assets/man.png"),
-                                fit: BoxFit.contain)),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
+            // Padding(
+            //   padding: const EdgeInsets.only(top: 10),
+            //   child: Container(
+            //     height: 50,
+            //     width: MediaQuery.of(context).size.width,
+            //     child: Row(
+            //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //       children: [
+            //         Padding(
+            //           padding: const EdgeInsets.only(
+            //             left: 10.0,
+            //           ),
+            //           child: InkWell(
+            //             onTap: () {
+            //               Navigator.push(
+            //                   context,
+            //                   MaterialPageRoute(
+            //                       builder: (context) => LogOut()));
+            //             },
+            //             child: Icon(
+            //               Icons.menu,
+            //               size: 30,
+            //               color: Colors.blue,
+            //             ),
+            //           ),
+            //         ),
+            //         Text(
+            //           "GROCERIE",
+            //           style: TextStyle(
+            //               fontSize: 30,
+            //               fontWeight: FontWeight.w900,
+            //               color: Colors.blue[700]),
+            //         ),
+            //         Padding(
+            //           padding: const EdgeInsets.only(right: 10.0),
+            //           child: Container(
+            //             height: 50,
+            //             width: 50,
+            //             decoration: BoxDecoration(
+            //                 boxShadow: [
+            //                   BoxShadow(
+            //                       color: Colors.grey.withOpacity(0.3),
+            //                       blurRadius: 6.0,
+            //                       spreadRadius: 4.0,
+            //                       offset: Offset(0.0, 0.3))
+            //                 ],
+            //                 color: Colors.blue[300],
+            //                 shape: BoxShape.circle,
+            //                 image: DecorationImage(
+            //                     image: AssetImage("assets/man.png"),
+            //                     fit: BoxFit.contain)),
+            //           ),
+            //         )
+            //       ],
+            //     ),
+            //   ),
+            // ),
+            // SizedBox(
+            //   height: 20,
+            // ),
             Container(
               height: 170,
               width: MediaQuery.of(context).size.width,

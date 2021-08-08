@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:major_project/FinalItemView.dart';
 
 class VegetableAll extends StatefulWidget {
   const VegetableAll({Key? key}) : super(key: key);
@@ -70,8 +71,10 @@ class _VegetableAllState extends State<VegetableAll> {
               width: MediaQuery.of(context).size.width,
               child: Row(
                 children: [
-                  _buildListItem('assets/broccoli.png', '70', 'Broccoli'),
-                  _buildListItem('assets/cauliflower.png', '30', 'Cauliflower'),
+                  _buildListItem(context, 'assets/broccoli.png', '70',
+                      'Broccoli', Broccoli()),
+                  _buildListItem(context, 'assets/cauliflower.png', '30',
+                      'Cauliflower', Cauliflower()),
                 ],
               ),
             ),
@@ -80,8 +83,10 @@ class _VegetableAllState extends State<VegetableAll> {
               width: MediaQuery.of(context).size.width,
               child: Row(
                 children: [
-                  _buildListItem('assets/tomato.png', '20', 'Tomato'),
-                  _buildListItem('assets/onion.png', '40', 'Onion'),
+                  _buildListItem(
+                      context, 'assets/tomato.png', '20', 'Tomato', Tomato()),
+                  _buildListItem(
+                      context, 'assets/onion.png', '40', 'Onion', Onion()),
                 ],
               ),
             ),
@@ -90,8 +95,9 @@ class _VegetableAllState extends State<VegetableAll> {
               width: MediaQuery.of(context).size.width,
               child: Row(
                 children: [
-                  _buildListItem('assets/potato.png', '15', 'Potato'),
-                  _buildListItem('assets/pea.png', '40', 'Pea'),
+                  _buildListItem(
+                      context, 'assets/potato.png', '15', 'Potato', Potato()),
+                  _buildListItem(context, 'assets/pea.png', '40', 'Pea', Pea()),
                 ],
               ),
             ),
@@ -100,8 +106,10 @@ class _VegetableAllState extends State<VegetableAll> {
               width: MediaQuery.of(context).size.width,
               child: Row(
                 children: [
-                  _buildListItem('assets/egglant.png', '35', 'Egglant'),
-                  _buildListItem('assets/bellpepper.png', '80', 'Bell Pepper'),
+                  _buildListItem(context, 'assets/egglant.png', '35', 'Egglant',
+                      Egglant()),
+                  _buildListItem(context, 'assets/bellpepper.png', '80',
+                      'Bell Pepper', BellPepper()),
                 ],
               ),
             ),
@@ -110,8 +118,10 @@ class _VegetableAllState extends State<VegetableAll> {
               width: MediaQuery.of(context).size.width,
               child: Row(
                 children: [
-                  _buildListItem('assets/carrot.png', '30', 'Carrot'),
-                  _buildListItem('assets/cucumber.png', '40', 'Cucumber'),
+                  _buildListItem(
+                      context, 'assets/carrot.png', '30', 'Carrot', Carrot()),
+                  _buildListItem(context, 'assets/cucumber.png', '40',
+                      'Cucumber', Cucumber()),
                 ],
               ),
             ),
@@ -125,40 +135,49 @@ class _VegetableAllState extends State<VegetableAll> {
   }
 }
 
-_buildListItem(String imgPath, String price, String fruitName) {
-  return Container(
-    height: 260,
-    width: 205,
-    decoration: BoxDecoration(
-        border: Border(
-      bottom: BorderSide(color: Colors.black12, width: 1.0),
-      right: BorderSide(color: Colors.black12, width: 1.0),
-      top: BorderSide(color: Colors.black12, width: 1.0),
-    )),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        Image.asset(imgPath),
-        Padding(
-          padding: const EdgeInsets.only(left: 15.0),
-          child: Text(
-            "\u{20B9}$price" + '/Kg',
-            style: TextStyle(
-                fontSize: 25, fontWeight: FontWeight.bold, color: Colors.blue),
+_buildListItem(BuildContext context, String imgPath, String price,
+    String itemName, Widget classPath) {
+  return GestureDetector(
+    onTap: () {
+      Navigator.push(context,
+          MaterialPageRoute(builder: (BuildContext context) => classPath));
+    },
+    child: Container(
+      height: 260,
+      width: 205,
+      decoration: BoxDecoration(
+          border: Border(
+        bottom: BorderSide(color: Colors.black12, width: 1.0),
+        right: BorderSide(color: Colors.black12, width: 1.0),
+        top: BorderSide(color: Colors.black12, width: 1.0),
+      )),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Image.asset(imgPath),
+          Padding(
+            padding: const EdgeInsets.only(left: 15.0),
+            child: Text(
+              "\u{20B9}$price" + '/Kg',
+              style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue),
+            ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(left: 15.0),
-          child: Text(
-            fruitName,
-            style: TextStyle(
-                fontSize: 20,
-                // fontWeight: FontWeight.bold,
-                color: Colors.lightBlue),
-          ),
-        )
-      ],
+          Padding(
+            padding: const EdgeInsets.only(left: 15.0),
+            child: Text(
+              itemName,
+              style: TextStyle(
+                  fontSize: 20,
+                  // fontWeight: FontWeight.bold,
+                  color: Colors.lightBlue),
+            ),
+          )
+        ],
+      ),
     ),
   );
 }

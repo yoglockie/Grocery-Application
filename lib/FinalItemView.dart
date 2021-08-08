@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:major_project/variables.dart';
 
-//fruits
+//fruits line 5-155
 class Banana extends StatefulWidget {
   const Banana({Key? key}) : super(key: key);
 
@@ -150,6 +150,158 @@ class _KiwiState extends State<Kiwi> {
   Widget build(BuildContext context) {
     return _buildFinalItemView(
         context, kiwiimgFinal, kiwi, kiwiPrice, kiwiCutPrice, kiwidesc);
+  }
+}
+
+//vegetables
+
+class Tomato extends StatefulWidget {
+  const Tomato({Key? key}) : super(key: key);
+
+  @override
+  _TomatoState createState() => _TomatoState();
+}
+
+class _TomatoState extends State<Tomato> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(context, tomatoimgFinal, tomato, tomatoPrice,
+        tomatoCutPrice, tomatodesc);
+  }
+}
+
+class Onion extends StatefulWidget {
+  const Onion({Key? key}) : super(key: key);
+
+  @override
+  _OnionState createState() => _OnionState();
+}
+
+class _OnionState extends State<Onion> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(
+        context, onionimgFinal, onion, onionPrice, onionCutPrice, oniondesc);
+  }
+}
+
+class Broccoli extends StatefulWidget {
+  const Broccoli({Key? key}) : super(key: key);
+
+  @override
+  _BroccoliState createState() => _BroccoliState();
+}
+
+class _BroccoliState extends State<Broccoli> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(context, broccoliimgFinal, broccoli,
+        broccoliPrice, broccoliCutPrice, broccolidesc);
+  }
+}
+
+class Cauliflower extends StatefulWidget {
+  const Cauliflower({Key? key}) : super(key: key);
+
+  @override
+  _CauliflowerState createState() => _CauliflowerState();
+}
+
+class _CauliflowerState extends State<Cauliflower> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(context, cauliflowerimgFinal, cauliflower,
+        cauliflowerPrice, cauliflowerCutPrice, cauliflowerdesc);
+  }
+}
+
+class Potato extends StatefulWidget {
+  const Potato({Key? key}) : super(key: key);
+
+  @override
+  _PotatoState createState() => _PotatoState();
+}
+
+class _PotatoState extends State<Potato> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(context, potatoimgFinal, potato, potatoPrice,
+        potatoCutPrice, potatodesc);
+  }
+}
+
+class Pea extends StatefulWidget {
+  const Pea({Key? key}) : super(key: key);
+
+  @override
+  _PeaState createState() => _PeaState();
+}
+
+class _PeaState extends State<Pea> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(
+        context, peaimgFinal, pea, peaPrice, peaCutPrice, peadesc);
+  }
+}
+
+class Egglant extends StatefulWidget {
+  const Egglant({Key? key}) : super(key: key);
+
+  @override
+  _EgglantState createState() => _EgglantState();
+}
+
+class _EgglantState extends State<Egglant> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(context, egglantimgFinal, egglant, egglantPrice,
+        egglantCutPrice, egglantdesc);
+  }
+}
+
+class BellPepper extends StatefulWidget {
+  const BellPepper({Key? key}) : super(key: key);
+
+  @override
+  _BellPepperState createState() => _BellPepperState();
+}
+
+class _BellPepperState extends State<BellPepper> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(context, bellpepperimgFinal, bellpepper,
+        bellpepperPrice, bellpepperCutPrice, bellpepperdesc);
+  }
+}
+
+class Carrot extends StatefulWidget {
+  const Carrot({Key? key}) : super(key: key);
+
+  @override
+  _CarrotState createState() => _CarrotState();
+}
+
+class _CarrotState extends State<Carrot> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(context, carrotimgFinal, carrot, carrotPrice,
+        carrotCutPrice, carrotdesc);
+  }
+}
+
+class Cucumber extends StatefulWidget {
+  const Cucumber({Key? key}) : super(key: key);
+
+  @override
+  _CucumberState createState() => _CucumberState();
+}
+
+class _CucumberState extends State<Cucumber> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(context, cucumberimgFinal, cucumber,
+        cucumberPrice, cucumberCutPrice, cucumberdesc);
   }
 }
 

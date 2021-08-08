@@ -1,3 +1,5 @@
+//fruits variables line 4-92
+
 //banana
 String banana = 'Banana';
 String bananaPrice = '30';
@@ -85,4 +87,96 @@ String pineappleCutPrice = '99';
 String pineappleimgInit = 'assets/pineapple.png';
 String pineappleimgFinal = 'assets/pineapplefinal.png';
 String pineappledesc =
+    'The pineapple is a tropical plant with an edible fruit and the most economically significant plant in the family Bromeliaceae.';
+
+// vegetable's variables line 94-185
+
+//broccoli
+String broccoli = 'Broccoli';
+String broccoliPrice = '70';
+String broccoliCutPrice = '100';
+String broccoliimgInit = 'assets/broccoli.png';
+String broccoliimgFinal = 'assets/broccolifinal.png';
+String broccolidesc =
+    'A banana is an elongated, edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa. In some countries, bananas used for cooking may be called "plantains", distinguishing them from dessert bananas.';
+
+//cauliflower
+String cauliflower = 'Cauliflower';
+String cauliflowerPrice = '30';
+String cauliflowerCutPrice = '50';
+String cauliflowerimgInit = 'assets/cauliflower.png';
+String cauliflowerimgFinal = 'assets/cauliflowerfinal.png';
+String cauliflowerdesc =
+    'A mango is an edible stone fruit produced by the tropical tree Mangifera indica which is believed to have originated from the region between northwestern Myanmar, Bangladesh, and northeastern India.';
+
+//tomato
+String tomato = 'Tomato';
+String tomatoPrice = '20';
+String tomatoCutPrice = '30';
+String tomatoimgInit = 'assets/tomato.png';
+String tomatoimgFinal = 'assets/tomatofinal.png';
+String tomatodesc =
+    'An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. ';
+
+//onion
+String onion = 'Onion';
+String onionPrice = '40';
+String onionCutPrice = '50';
+String onionimgInit = 'assets/onion.png';
+String onionimgFinal = 'assets/onionfinal.png';
+String oniondesc =
+    'The pomegranate is a fruit-bearing deciduous shrub in the family Lythraceae, subfamily Punicoideae, that grows between 5 and 10 m tall.';
+
+//potato
+String potato = 'Potato';
+String potatoPrice = '15';
+String potatoCutPrice = '20';
+String potatoimgInit = 'assets/potato.png';
+String potatoimgFinal = 'assets/potatofinal.png';
+String potatodesc =
+    'A grape is a fruit, botanically a berry, of the deciduous woody vines of the flowering plant genus Vitis. Grapes can be eaten fresh as table grapes, used for making wine, jam, grape juice, jelly';
+
+//pea
+String pea = 'Pea';
+String peaPrice = '40';
+String peaCutPrice = '59';
+String peaimgInit = 'assets/pea.png';
+String peaimgFinal = 'assets/peafinal.png';
+String peadesc =
+    'The papaya, papaw, or pawpaw is the plant Carica papaya, one of the 22 accepted species in the genus Carica of the family Caricaceae.';
+
+//egglant
+String egglant = 'Egglant';
+String egglantPrice = '35';
+String egglantCutPrice = '50';
+String egglantimgInit = 'assets/egglant.png';
+String egglantimgFinal = 'assets/egglantfinal.png';
+String egglantdesc =
+    'A cherry is the fruit of many plants of the genus Prunus, and is a fleshy drupe. Commercial cherries are obtained from cultivars of several species';
+
+//bellpepper
+String bellpepper = 'Bell Pepper';
+String bellpepperPrice = '80';
+String bellpepperCutPrice = '100';
+String bellpepperimgInit = 'assets/bellpepper.png';
+String bellpepperimgFinal = 'assets/bellpepperfinal.png';
+String bellpepperdesc =
+    'Kiwifruit or Chinese gooseberry is the edible berry of several species of woody vines in the genus Actinidia. The most common cultivar group of kiwifruit is oval';
+
+//carrot
+String carrot = 'Carrot';
+String carrotPrice = '30';
+String carrotCutPrice = '60';
+String carrotimgInit = 'assets/carrot.png';
+String carrotimgFinal = 'assets/carrotfinal.png';
+String carrotdesc =
+    'The orange is the fruit of various citrus species in the family Rutaceae; it primarily refers to Citrus × sinensis, which is also called sweet orange';
+
+//cucumber
+String cucumber = 'Cucumber';
+String cucumberPrice = '40';
+String cucumberCutPrice = '59';
+String cucumberimgInit = 'assets/cucumber.png';
+String cucumberimgFinal = 'assets/cucumberfinal.png';
+String cucumberdesc =
     'The pineapple is a tropical plant with an edible fruit and the most economically significant plant in the family Bromeliaceae.';

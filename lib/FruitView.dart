@@ -51,66 +51,78 @@ class FruitView extends StatelessWidget {
                     ),
                   ),
                 ),
-                Container(
-                  height: 150,
-                  width: 120,
-                  decoration: BoxDecoration(
-                      color: Color(0xFFFFE9C6),
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 75,
-                        width: 75,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/apple.png"),
-                                fit: BoxFit.contain),
-                            shape: BoxShape.circle,
-                            color: Colors.white),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Apple()));
+                    },
+                    child: Container(
+                      height: 150,
+                      width: 120,
+                      decoration: BoxDecoration(
+                          color: Color(0xFFFFE9C6),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 75,
+                            width: 75,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage("assets/apple.png"),
+                                    fit: BoxFit.contain),
+                                shape: BoxShape.circle,
+                                color: Colors.white),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12.0),
+                            child: Text("Apple",
+                                style: TextStyle(
+                                    color: Color(0xFFDA9551),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold)),
+                          )
+                        ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 12.0),
-                        child: Text("Apple",
-                            style: TextStyle(
-                                color: Color(0xFFDA9551),
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold)),
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 150,
-                  width: 120,
-                  decoration: BoxDecoration(
-                      color: Color(0xFFFFE9C6),
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 75,
-                        width: 75,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/pomegranate.png"),
-                                fit: BoxFit.contain),
-                            shape: BoxShape.circle,
-                            color: Colors.white),
+                    )),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Pomegranate()));
+                    },
+                    child: Container(
+                      height: 150,
+                      width: 120,
+                      decoration: BoxDecoration(
+                          color: Color(0xFFFFE9C6),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 75,
+                            width: 75,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage("assets/pomegranate.png"),
+                                    fit: BoxFit.contain),
+                                shape: BoxShape.circle,
+                                color: Colors.white),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12.0),
+                            child: Text("Pomegranate",
+                                style: TextStyle(
+                                    color: Color(0xFFDA9551),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold)),
+                          ),
+                        ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 12.0),
-                        child: Text("Pomegranate",
-                            style: TextStyle(
-                                color: Color(0xFFDA9551),
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold)),
-                      )
-                    ],
-                  ),
-                ),
+                    ))
               ],
             ),
           ), //1
@@ -120,96 +132,111 @@ class FruitView extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  height: 150,
-                  width: 120,
-                  decoration: BoxDecoration(
-                      color: Color(0xFFFFE9C6),
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 75,
-                        width: 75,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/grapes.png"),
-                                fit: BoxFit.contain),
-                            shape: BoxShape.circle,
-                            color: Colors.white),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Grapes()));
+                    },
+                    child: Container(
+                      height: 150,
+                      width: 120,
+                      decoration: BoxDecoration(
+                          color: Color(0xFFFFE9C6),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 75,
+                            width: 75,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage("assets/grapes.png"),
+                                    fit: BoxFit.contain),
+                                shape: BoxShape.circle,
+                                color: Colors.white),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12.0),
+                            child: Text("Grapes",
+                                style: TextStyle(
+                                    color: Color(0xFFDA9551),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold)),
+                          ),
+                        ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 12.0),
-                        child: Text("Grapes",
-                            style: TextStyle(
-                                color: Color(0xFFDA9551),
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold)),
+                    )),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Mango()));
+                    },
+                    child: Container(
+                      height: 150,
+                      width: 120,
+                      decoration: BoxDecoration(
+                          color: Color(0xFFFFE9C6),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 75,
+                            width: 75,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage("assets/mango.png"),
+                                    fit: BoxFit.contain),
+                                shape: BoxShape.circle,
+                                color: Colors.white),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12.0),
+                            child: Text("Mango",
+                                style: TextStyle(
+                                    color: Color(0xFFDA9551),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold)),
+                          )
+                        ],
                       ),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 150,
-                  width: 120,
-                  decoration: BoxDecoration(
-                      color: Color(0xFFFFE9C6),
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 75,
-                        width: 75,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/mango.png"),
-                                fit: BoxFit.contain),
-                            shape: BoxShape.circle,
-                            color: Colors.white),
+                    )),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Papaya()));
+                    },
+                    child: Container(
+                      height: 150,
+                      width: 120,
+                      decoration: BoxDecoration(
+                          color: Color(0xFFFFE9C6),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 75,
+                            width: 75,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage("assets/papaya.png"),
+                                    fit: BoxFit.contain),
+                                shape: BoxShape.circle,
+                                color: Colors.white),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12.0),
+                            child: Text("Papaya",
+                                style: TextStyle(
+                                    color: Color(0xFFDA9551),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold)),
+                          )
+                        ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 12.0),
-                        child: Text("Mango",
-                            style: TextStyle(
-                                color: Color(0xFFDA9551),
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold)),
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 150,
-                  width: 120,
-                  decoration: BoxDecoration(
-                      color: Color(0xFFFFE9C6),
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 75,
-                        width: 75,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/papaya.png"),
-                                fit: BoxFit.contain),
-                            shape: BoxShape.circle,
-                            color: Colors.white),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 12.0),
-                        child: Text("Papaya",
-                            style: TextStyle(
-                                color: Color(0xFFDA9551),
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold)),
-                      )
-                    ],
-                  ),
-                ),
+                    )),
               ],
             ),
           ),
