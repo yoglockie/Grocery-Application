@@ -353,9 +353,9 @@ _buildFinalItemView(BuildContext context, String itemFinalImgPath,
                       Padding(
                         padding: const EdgeInsets.only(right: 20.0),
                         child: Icon(
-                          Icons.favorite_border,
+                          Icons.shop_2,
                           size: 30,
-                          color: Colors.red,
+                          color: Colors.green,
                         ),
                       )
                     ],
@@ -475,20 +475,33 @@ _buildFinalItemView(BuildContext context, String itemFinalImgPath,
                       ),
                       Padding(
                         padding: const EdgeInsets.only(right: 15.0),
-                        child: Container(
-                          width: MediaQuery.of(context).size.width / 2.2,
-                          height: 52,
-                          decoration: BoxDecoration(
-                              color: Colors.lightGreen,
-                              borderRadius: BorderRadius.circular(15)),
-                          child: Center(
-                            child: Text("Buy the Item",
-                                style: GoogleFonts.firaSans(
-                                  decoration: TextDecoration.none,
-                                  fontSize: 20,
-                                  color: Colors.white,
-                                  //
-                                )),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        _buildFinalPaymentView(
+                                            context,
+                                            kItemName,
+                                            kItemPrice,
+                                            itemFinalImgPath)));
+                          },
+                          child: Container(
+                            width: MediaQuery.of(context).size.width / 2.2,
+                            height: 52,
+                            decoration: BoxDecoration(
+                                color: Colors.lightGreen,
+                                borderRadius: BorderRadius.circular(15)),
+                            child: Center(
+                              child: Text("Buy the Item",
+                                  style: GoogleFonts.firaSans(
+                                    decoration: TextDecoration.none,
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                    //
+                                  )),
+                            ),
                           ),
                         ),
                       )
@@ -511,6 +524,210 @@ _buildFinalItemView(BuildContext context, String itemFinalImgPath,
                 color: Colors.transparent.withOpacity(0.2),
               ),
             )),
+      ],
+    ),
+  );
+}
+
+_buildFinalPaymentView(
+    BuildContext context, String lItemName, String lItemPrice, String img) {
+  return Scaffold(
+    appBar: AppBar(
+      leading: InkWell(
+        onTap: () {
+          Navigator.pop(context);
+        },
+        child: Icon(
+          Icons.arrow_back_ios,
+          color: Colors.blue[900],
+        ),
+      ),
+      elevation: 0,
+    ),
+    body: Column(
+      children: [
+        SizedBox(
+          height: 20,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 10.0, right: 220),
+          child: Text("Checkout",
+              style: GoogleFonts.nunitoSans(
+                  fontSize: 35,
+                  color: Colors.blue[900],
+                  fontWeight: FontWeight.bold)),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+          child: Divider(
+            color: Colors.blue,
+          ),
+        ),
+        Container(
+          height: 300,
+          width: MediaQuery.of(context).size.width,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 15.0),
+                child: Container(
+                  height: 220,
+                  width: MediaQuery.of(context).size.width / 2.25,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      image: DecorationImage(
+                        image: AssetImage(img),
+                        fit: BoxFit.cover,
+                      )),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10.0),
+                child: Container(
+                  height: 220,
+                  width: MediaQuery.of(context).size.width / 2.25,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 15.0),
+                        child: Text(
+                          lItemName,
+                          style: GoogleFonts.heebo(
+                              fontSize: 30,
+                              color: Colors.blue[800],
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Padding(
+                          padding: const EdgeInsets.only(top: 8.0),
+                          child: Text(
+                            "\u{20B9}$lItemPrice",
+                            style: GoogleFonts.heebo(
+                                fontSize: 27,
+                                color: Colors.blue[800],
+                                fontWeight: FontWeight.bold),
+                          )),
+                      Padding(
+                          padding: const EdgeInsets.only(top: 8.0),
+                          child: Text(
+                            "For 1Kg",
+                            style: GoogleFonts.heebo(
+                                fontSize: 17,
+                                color: Colors.blue[800],
+                                fontWeight: FontWeight.bold),
+                          )),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10.0),
+                        child: Icon(
+                          Icons.shop,
+                          color: Colors.blue[800],
+                          size: 30,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+          child: Divider(
+            color: Colors.blue,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 50.0),
+          child: Container(
+            height: 130,
+            width: MediaQuery.of(context).size.width,
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Subtotal",
+                      style: GoogleFonts.heebo(
+                          color: Colors.blue[500], fontSize: 20),
+                    ),
+                    Text(
+                      "\u{20B9}$lItemPrice",
+                      style: GoogleFonts.heebo(
+                          color: Colors.blue[500], fontSize: 20),
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Tax",
+                      style: GoogleFonts.heebo(
+                          color: Colors.blue[500], fontSize: 20),
+                    ),
+                    Text(
+                      "\u{20B9}${0}",
+                      style: GoogleFonts.heebo(
+                          color: Colors.blue[500], fontSize: 20),
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Total",
+                      style: GoogleFonts.heebo(
+                          color: Colors.blue[500],
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      "\u{20B9}$lItemPrice",
+                      style: GoogleFonts.heebo(
+                          color: Colors.blue[500],
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                )
+              ],
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 50,
+          width: 300,
+          child: ElevatedButton(
+            onPressed: () {},
+            child: Text(
+              "Proceed to Checkout",
+              style: GoogleFonts.heebo(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
+            ),
+            style: ElevatedButton.styleFrom(
+                primary: Colors.blue[900],
+                elevation: 3,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30))),
+          ),
+        )
       ],
     ),
   );

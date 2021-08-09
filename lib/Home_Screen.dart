@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:major_project/FruitView.dart';
-import 'package:major_project/LogOut.dart';
+// import 'package:major_project/LogOut.dart';
 import 'package:major_project/MoreView.dart';
 import 'package:major_project/SpicesView.dart';
 import 'package:major_project/VegetableView.dart';
