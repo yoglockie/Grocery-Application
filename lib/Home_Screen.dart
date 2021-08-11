@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:major_project/FruitView.dart';
+import 'package:major_project/LogOut.dart';
 // import 'package:major_project/LogOut.dart';
 import 'package:major_project/MoreView.dart';
 import 'package:major_project/SpicesView.dart';
@@ -57,22 +58,28 @@ class _HomePageState extends State<HomePage>
           actions: [
             Padding(
               padding: const EdgeInsets.only(right: 10.0, top: 7),
-              child: Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.grey.withOpacity(0.3),
-                          blurRadius: 6.0,
-                          spreadRadius: 4.0,
-                          offset: Offset(0.0, 0.3))
-                    ],
-                    color: Colors.blue[300],
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                        image: AssetImage("assets/man.png"),
-                        fit: BoxFit.contain)),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => LogOut()));
+                },
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.withOpacity(0.3),
+                            blurRadius: 6.0,
+                            spreadRadius: 4.0,
+                            offset: Offset(0.0, 0.3))
+                      ],
+                      color: Colors.blue[300],
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                          image: AssetImage("assets/man.png"),
+                          fit: BoxFit.contain)),
+                ),
               ),
             )
           ],

@@ -46,9 +46,9 @@ class _FruitAllState extends State<FruitAll> {
                     Padding(
                       padding: const EdgeInsets.only(right: 10.0),
                       child: Icon(
-                        Icons.shopping_cart,
+                        Icons.motorcycle_outlined,
                         color: Colors.blue,
-                        size: 35.0,
+                        size: 40.0,
                       ),
                     )
                   ],

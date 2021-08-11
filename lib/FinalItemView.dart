@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:major_project/variables.dart';
+import 'package:razorpay_flutter/razorpay_flutter.dart';
 
 //fruits line 5-155
 class Banana extends StatefulWidget {
@@ -480,12 +482,10 @@ _buildFinalItemView(BuildContext context, String itemFinalImgPath,
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) =>
-                                        _buildFinalPaymentView(
-                                            context,
-                                            kItemName,
-                                            kItemPrice,
-                                            itemFinalImgPath)));
+                                    builder: (context) => ItemFinalandPayment(
+                                        kItemName,
+                                        kItemPrice,
+                                        itemFinalImgPath)));
                           },
                           child: Container(
                             width: MediaQuery.of(context).size.width / 2.2,
@@ -529,206 +529,256 @@ _buildFinalItemView(BuildContext context, String itemFinalImgPath,
   );
 }
 
-_buildFinalPaymentView(
-    BuildContext context, String lItemName, String lItemPrice, String img) {
-  return Scaffold(
-    appBar: AppBar(
-      leading: InkWell(
-        onTap: () {
-          Navigator.pop(context);
-        },
-        child: Icon(
-          Icons.arrow_back_ios,
-          color: Colors.blue[900],
-        ),
-      ),
-      elevation: 0,
-    ),
-    body: Column(
-      children: [
-        SizedBox(
-          height: 20,
-        ),
-        Padding(
-          padding: const EdgeInsets.only(left: 10.0, right: 220),
-          child: Text("Checkout",
-              style: GoogleFonts.nunitoSans(
-                  fontSize: 35,
-                  color: Colors.blue[900],
-                  fontWeight: FontWeight.bold)),
-        ),
-        SizedBox(
-          height: 10,
-        ),
-        Padding(
-          padding: const EdgeInsets.only(left: 15.0, right: 15.0),
-          child: Divider(
-            color: Colors.blue,
+class ItemFinalandPayment extends StatefulWidget {
+  const ItemFinalandPayment(this.lItemName, this.lItemPrice, this.img);
+
+  final String lItemName;
+  final String lItemPrice;
+  final String img;
+
+  @override
+  _ItemFinalandPaymentState createState() => _ItemFinalandPaymentState();
+}
+
+class _ItemFinalandPaymentState extends State<ItemFinalandPayment> {
+  final storage = new FlutterSecureStorage();
+
+  late Razorpay _razorpay;
+
+  @override
+  void initState() {
+    super.initState();
+    _razorpay = Razorpay();
+    // _razorpay.on(Razorpay.EVENT_PAYMENT_SUCCESS, _handlePaymentSuccess);
+    // _razorpay.on(Razorpay.EVENT_PAYMENT_ERROR, _handlePaymentError);
+    // _razorpay.on(Razorpay.EVENT_EXTERNAL_WALLET, _handleExternalWallet);
+  }
+
+  void openCheckout() async {
+    var options = {
+      'key': 'rzp_test_xXcz1iL0ZaiWj9',
+      'amount': widget.lItemPrice + '00',
+      'name': 'Lokesh',
+      'description': '1Kg ' + widget.lItemName,
+      'prefill': {
+        'contact': '8239479183',
+        'email': 'yogilokesh@gmail.com',
+      },
+      'external': {
+        'wallets': ['paytm']
+      }
+    };
+
+    try {
+      _razorpay.open(options);
+    } catch (e) {
+      //debugPrint(e);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: InkWell(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.blue[900],
           ),
         ),
-        Container(
-          height: 300,
-          width: MediaQuery.of(context).size.width,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 15.0),
-                child: Container(
-                  height: 220,
-                  width: MediaQuery.of(context).size.width / 2.25,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
-                      image: DecorationImage(
-                        image: AssetImage(img),
-                        fit: BoxFit.cover,
-                      )),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 10.0),
-                child: Container(
-                  height: 220,
-                  width: MediaQuery.of(context).size.width / 2.25,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 15.0),
-                        child: Text(
-                          lItemName,
-                          style: GoogleFonts.heebo(
-                              fontSize: 30,
-                              color: Colors.blue[800],
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      Padding(
-                          padding: const EdgeInsets.only(top: 8.0),
-                          child: Text(
-                            "\u{20B9}$lItemPrice",
-                            style: GoogleFonts.heebo(
-                                fontSize: 27,
-                                color: Colors.blue[800],
-                                fontWeight: FontWeight.bold),
-                          )),
-                      Padding(
-                          padding: const EdgeInsets.only(top: 8.0),
-                          child: Text(
-                            "For 1Kg",
-                            style: GoogleFonts.heebo(
-                                fontSize: 17,
-                                color: Colors.blue[800],
-                                fontWeight: FontWeight.bold),
-                          )),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10.0),
-                        child: Icon(
-                          Icons.shop,
-                          color: Colors.blue[800],
-                          size: 30,
-                        ),
-                      )
-                    ],
+        elevation: 0,
+      ),
+      body: Column(
+        children: [
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 10.0, right: 220),
+            child: Text("Checkout",
+                style: GoogleFonts.nunitoSans(
+                    fontSize: 35,
+                    color: Colors.blue[900],
+                    fontWeight: FontWeight.bold)),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+            child: Divider(
+              color: Colors.blue,
+            ),
+          ),
+          Container(
+            height: 300,
+            width: MediaQuery.of(context).size.width,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 15.0),
+                  child: Container(
+                    height: 220,
+                    width: MediaQuery.of(context).size.width / 2.25,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        image: DecorationImage(
+                          image: AssetImage(widget.img),
+                          fit: BoxFit.cover,
+                        )),
                   ),
                 ),
-              )
-            ],
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(left: 15.0, right: 15.0),
-          child: Divider(
-            color: Colors.blue,
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 50.0),
-          child: Container(
-            height: 130,
-            width: MediaQuery.of(context).size.width,
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Subtotal",
-                      style: GoogleFonts.heebo(
-                          color: Colors.blue[500], fontSize: 20),
+                Padding(
+                  padding: const EdgeInsets.only(left: 10.0),
+                  child: Container(
+                    height: 220,
+                    width: MediaQuery.of(context).size.width / 2.25,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 15.0),
+                          child: Text(
+                            widget.lItemName,
+                            style: GoogleFonts.heebo(
+                                fontSize: 30,
+                                color: Colors.blue[800],
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Padding(
+                            padding: const EdgeInsets.only(top: 8.0),
+                            child: Text(
+                              "\u{20B9}${widget.lItemPrice}",
+                              style: GoogleFonts.heebo(
+                                  fontSize: 27,
+                                  color: Colors.blue[800],
+                                  fontWeight: FontWeight.bold),
+                            )),
+                        Padding(
+                            padding: const EdgeInsets.only(top: 8.0),
+                            child: Text(
+                              "For 1Kg",
+                              style: GoogleFonts.heebo(
+                                  fontSize: 17,
+                                  color: Colors.blue[800],
+                                  fontWeight: FontWeight.bold),
+                            )),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 10.0),
+                          child: Icon(
+                            Icons.shop,
+                            color: Colors.blue[800],
+                            size: 30,
+                          ),
+                        )
+                      ],
                     ),
-                    Text(
-                      "\u{20B9}$lItemPrice",
-                      style: GoogleFonts.heebo(
-                          color: Colors.blue[500], fontSize: 20),
-                    )
-                  ],
-                ),
-                SizedBox(
-                  height: 5,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Tax",
-                      style: GoogleFonts.heebo(
-                          color: Colors.blue[500], fontSize: 20),
-                    ),
-                    Text(
-                      "\u{20B9}${0}",
-                      style: GoogleFonts.heebo(
-                          color: Colors.blue[500], fontSize: 20),
-                    )
-                  ],
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Total",
-                      style: GoogleFonts.heebo(
-                          color: Colors.blue[500],
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      "\u{20B9}$lItemPrice",
-                      style: GoogleFonts.heebo(
-                          color: Colors.blue[500],
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold),
-                    )
-                  ],
+                  ),
                 )
               ],
             ),
           ),
-        ),
-        SizedBox(
-          height: 50,
-          width: 300,
-          child: ElevatedButton(
-            onPressed: () {},
-            child: Text(
-              "Proceed to Checkout",
-              style: GoogleFonts.heebo(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold),
+          Padding(
+            padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+            child: Divider(
+              color: Colors.blue,
             ),
-            style: ElevatedButton.styleFrom(
-                primary: Colors.blue[900],
-                elevation: 3,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30))),
           ),
-        )
-      ],
-    ),
-  );
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 50.0),
+            child: Container(
+              height: 130,
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Subtotal",
+                        style: GoogleFonts.heebo(
+                            color: Colors.blue[500], fontSize: 20),
+                      ),
+                      Text(
+                        "\u{20B9}${widget.lItemPrice}",
+                        style: GoogleFonts.heebo(
+                            color: Colors.blue[500], fontSize: 20),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Tax",
+                        style: GoogleFonts.heebo(
+                            color: Colors.blue[500], fontSize: 20),
+                      ),
+                      Text(
+                        "\u{20B9}${0}",
+                        style: GoogleFonts.heebo(
+                            color: Colors.blue[500], fontSize: 20),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Total",
+                        style: GoogleFonts.heebo(
+                            color: Colors.blue[500],
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "\u{20B9}${widget.lItemPrice}",
+                        style: GoogleFonts.heebo(
+                            color: Colors.blue[500],
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 50,
+            width: 300,
+            child: ElevatedButton(
+              onPressed: () {
+                openCheckout();
+              },
+              child: Text(
+                "Proceed to Checkout",
+                style: GoogleFonts.heebo(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+              style: ElevatedButton.styleFrom(
+                  primary: Colors.blue[900],
+                  elevation: 3,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30))),
+            ),
+          )
+        ],
+      ),
+    );
+  }
 }
