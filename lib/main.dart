@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:major_project/Home_Screen.dart';
 import 'package:major_project/login_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(MyApp());
@@ -32,7 +33,10 @@ class MyApp extends StatelessWidget {
             print("Something Went Wrong");
           }
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
+            return Center(
+                child: CircularProgressIndicator(
+              color: Colors.white,
+            ));
           }
 
           return MaterialApp(

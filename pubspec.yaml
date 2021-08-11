@@ -35,6 +35,10 @@ dependencies:
   firebase_auth: "^3.0.1" 
   flutter_secure_storage:   
   razorpay_flutter:
+  path_provider:
+  image_picker:
+  shared_preferences:
+  animated_theme_switcher:  
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -114,7 +118,7 @@ flutter:
     - assets/carrotfinal.png
     - assets/bellpepperfinal.png
     - assets/cucumberfinal.png
-
+    - assets/useravtar.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

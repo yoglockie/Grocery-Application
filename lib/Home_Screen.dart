@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:major_project/FruitView.dart';
-import 'package:major_project/LogOut.dart';
-// import 'package:major_project/LogOut.dart';
+
+//import 'package:major_project/LogOut.dart';
+
 import 'package:major_project/MoreView.dart';
 import 'package:major_project/SpicesView.dart';
 import 'package:major_project/VegetableView.dart';
+import 'package:major_project/pofile_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -61,7 +63,7 @@ class _HomePageState extends State<HomePage>
               child: InkWell(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => LogOut()));
+                      MaterialPageRoute(builder: (context) => ProfilePage()));
                 },
                 child: Container(
                   height: 50,
