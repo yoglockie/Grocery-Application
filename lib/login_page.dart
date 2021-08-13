@@ -218,23 +218,33 @@ class _LoginPageState extends State<LoginPage> {
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
-                                  color: Colors.blueAccent,
+                                  color: Colors.blue,
                                   borderRadius: BorderRadius.circular(15)),
-                              child: TextButton(
-                                  onPressed: () {
-                                    if (_formKey.currentState!.validate()) {
-                                      setState(() {
-                                        email = emailController.text;
-                                        password = passwordController.text;
-                                      });
-                                      userLogin();
-                                    }
-                                  },
-                                  child: Text(
-                                    "Login",
-                                    style: TextStyle(
-                                        color: Colors.white, fontSize: 22),
-                                  )),
+                              child: SizedBox(
+                                height: 50,
+                                width: 150,
+                                child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                        primary: Colors.blue,
+                                        elevation: 3,
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(30))),
+                                    onPressed: () {
+                                      if (_formKey.currentState!.validate()) {
+                                        setState(() {
+                                          email = emailController.text;
+                                          password = passwordController.text;
+                                        });
+                                        userLogin();
+                                      }
+                                    },
+                                    child: Text(
+                                      "Login",
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 22),
+                                    )),
+                              ),
                             ),
                           ),
                           SizedBox(

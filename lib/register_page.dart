@@ -112,12 +112,23 @@ class _RegisterPageState extends State<RegisterPage> {
                     Container(
                       height: 140,
                       child: Center(
-                        child: Text(
-                          "SignUp",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 55,
-                              fontWeight: FontWeight.bold),
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 25.0),
+                              child: Text(
+                                "SignUp",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 55,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Text("sign up by valid email",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ))
+                          ],
                         ),
                       ),
                     ),
@@ -279,25 +290,35 @@ class _RegisterPageState extends State<RegisterPage> {
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
-                                  color: Colors.blueAccent,
+                                  color: Colors.blue,
                                   borderRadius: BorderRadius.circular(15)),
-                              child: TextButton(
-                                  onPressed: () {
-                                    if (_formKey.currentState!.validate()) {
-                                      setState(() {
-                                        email = emailController.text;
-                                        password = passwordController.text;
-                                        confirmPassword =
-                                            confirmPasswordController.text;
-                                      });
-                                      registration();
-                                    }
-                                  },
-                                  child: Text(
-                                    "Create Account",
-                                    style: TextStyle(
-                                        color: Colors.white, fontSize: 22),
-                                  )),
+                              child: SizedBox(
+                                height: 50,
+                                width: 150,
+                                child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                        primary: Colors.blue,
+                                        elevation: 3,
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(30))),
+                                    onPressed: () {
+                                      if (_formKey.currentState!.validate()) {
+                                        setState(() {
+                                          email = emailController.text;
+                                          password = passwordController.text;
+                                          confirmPassword =
+                                              confirmPasswordController.text;
+                                        });
+                                        registration();
+                                      }
+                                    },
+                                    child: Text(
+                                      "Create Account",
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 22),
+                                    )),
+                              ),
                             ),
                           ),
                           SizedBox(

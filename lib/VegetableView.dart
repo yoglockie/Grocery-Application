@@ -22,7 +22,7 @@ class VegetableView extends StatelessWidget {
                     },
                     child: Container(
                       height: 150,
-                      width: MediaQuery.of(context).size.width / 3.37,
+                      width: MediaQuery.of(context).size.width / 3.40,
                       decoration: BoxDecoration(
                           color: Color(0xFFD7FADA),
                           borderRadius: BorderRadius.circular(20)),
@@ -44,7 +44,7 @@ class VegetableView extends StatelessWidget {
                             child: Text("Tomato",
                                 style: TextStyle(
                                     color: Color(0xFF56CC7E),
-                                    fontSize: 20,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold)),
                           ),
                         ],
@@ -59,7 +59,7 @@ class VegetableView extends StatelessWidget {
                     },
                     child: Container(
                       height: 150,
-                      width: MediaQuery.of(context).size.width / 3.37,
+                      width: MediaQuery.of(context).size.width / 3.40,
                       decoration: BoxDecoration(
                           color: Color(0xFFD7FADA),
                           borderRadius: BorderRadius.circular(20)),
@@ -81,7 +81,7 @@ class VegetableView extends StatelessWidget {
                             child: Text("Cauliflower",
                                 style: TextStyle(
                                     color: Color(0xFF56CC7E),
-                                    fontSize: 20,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold)),
                           )
                         ],
@@ -94,7 +94,7 @@ class VegetableView extends StatelessWidget {
                     },
                     child: Container(
                       height: 150,
-                      width: MediaQuery.of(context).size.width / 3.37,
+                      width: MediaQuery.of(context).size.width / 3.40,
                       decoration: BoxDecoration(
                           color: Color(0xFFD7FADA),
                           borderRadius: BorderRadius.circular(20)),
@@ -116,7 +116,7 @@ class VegetableView extends StatelessWidget {
                             child: Text("Potato",
                                 style: TextStyle(
                                     color: Color(0xFF56CC7E),
-                                    fontSize: 20,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold)),
                           )
                         ],
@@ -138,7 +138,7 @@ class VegetableView extends StatelessWidget {
                     },
                     child: Container(
                       height: 150,
-                      width: MediaQuery.of(context).size.width / 3.37,
+                      width: MediaQuery.of(context).size.width / 3.40,
                       decoration: BoxDecoration(
                           color: Color(0xFFD7FADA),
                           borderRadius: BorderRadius.circular(20)),
@@ -160,7 +160,7 @@ class VegetableView extends StatelessWidget {
                             child: Text("Onion",
                                 style: TextStyle(
                                     color: Color(0xFF56CC7E),
-                                    fontSize: 20,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold)),
                           ),
                         ],
@@ -195,7 +195,7 @@ class VegetableView extends StatelessWidget {
                             child: Text("Broccoli",
                                 style: TextStyle(
                                     color: Color(0xFF56CC7E),
-                                    fontSize: 20,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold)),
                           )
                         ],
@@ -208,7 +208,7 @@ class VegetableView extends StatelessWidget {
                     },
                     child: Container(
                       height: 150,
-                      width: MediaQuery.of(context).size.width / 3.37,
+                      width: MediaQuery.of(context).size.width / 3.40,
                       decoration: BoxDecoration(
                           color: Color(0xFFD7FADA),
                           borderRadius: BorderRadius.circular(20)),
@@ -230,7 +230,7 @@ class VegetableView extends StatelessWidget {
                             child: Text("Pea",
                                 style: TextStyle(
                                     color: Color(0xFF56CC7E),
-                                    fontSize: 20,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold)),
                           )
                         ],
@@ -256,7 +256,7 @@ class VegetableView extends StatelessWidget {
                     "See All",
                     style: TextStyle(
                         color: Colors.blue,
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold),
                   ),
                 ),

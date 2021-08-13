@@ -22,7 +22,7 @@ class SpicesView extends StatelessWidget {
                     },
                     child: Container(
                       height: 150,
-                      width: MediaQuery.of(context).size.width / 3.37,
+                      width: MediaQuery.of(context).size.width / 3.40,
                       decoration: BoxDecoration(
                           color: Color(0xFFC2E3FE),
                           borderRadius: BorderRadius.circular(20)),
@@ -44,7 +44,7 @@ class SpicesView extends StatelessWidget {
                             child: Text("Garlic",
                                 style: TextStyle(
                                     color: Color(0xFF6A8CAA),
-                                    fontSize: 20,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold)),
                           ),
                         ],
@@ -57,7 +57,7 @@ class SpicesView extends StatelessWidget {
                     },
                     child: Container(
                       height: 150,
-                      width: MediaQuery.of(context).size.width / 3.37,
+                      width: MediaQuery.of(context).size.width / 3.40,
                       decoration: BoxDecoration(
                           color: Color(0xFFC2E3FE),
                           borderRadius: BorderRadius.circular(20)),
@@ -79,7 +79,7 @@ class SpicesView extends StatelessWidget {
                             child: Text("Termeric",
                                 style: TextStyle(
                                     color: Color(0xFF6A8CAA),
-                                    fontSize: 20,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold)),
                           )
                         ],
@@ -92,7 +92,7 @@ class SpicesView extends StatelessWidget {
                     },
                     child: Container(
                       height: 150,
-                      width: MediaQuery.of(context).size.width / 3.37,
+                      width: MediaQuery.of(context).size.width / 3.40,
                       decoration: BoxDecoration(
                           color: Color(0xFFC2E3FE),
                           borderRadius: BorderRadius.circular(20)),
@@ -114,7 +114,7 @@ class SpicesView extends StatelessWidget {
                             child: Text("Chilli",
                                 style: TextStyle(
                                     color: Color(0xFF6A8CAA),
-                                    fontSize: 20,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold)),
                           )
                         ],
@@ -138,7 +138,7 @@ class SpicesView extends StatelessWidget {
                     },
                     child: Container(
                       height: 150,
-                      width: MediaQuery.of(context).size.width / 3.37,
+                      width: MediaQuery.of(context).size.width / 3.40,
                       decoration: BoxDecoration(
                           color: Color(0xFFC2E3FE),
                           borderRadius: BorderRadius.circular(20)),
@@ -160,7 +160,7 @@ class SpicesView extends StatelessWidget {
                             child: Text("Cumin Seeds",
                                 style: TextStyle(
                                     color: Color(0xFF6A8CAA),
-                                    fontSize: 20,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold)),
                           ),
                         ],
@@ -173,7 +173,7 @@ class SpicesView extends StatelessWidget {
                     },
                     child: Container(
                       height: 150,
-                      width: MediaQuery.of(context).size.width / 3.37,
+                      width: MediaQuery.of(context).size.width / 3.40,
                       decoration: BoxDecoration(
                           color: Color(0xFFC2E3FE),
                           borderRadius: BorderRadius.circular(20)),
@@ -195,7 +195,7 @@ class SpicesView extends StatelessWidget {
                             child: Text("Coriander",
                                 style: TextStyle(
                                     color: Color(0xFF6A8CAA),
-                                    fontSize: 20,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold)),
                           )
                         ],
@@ -210,7 +210,7 @@ class SpicesView extends StatelessWidget {
                     },
                     child: Container(
                       height: 150,
-                      width: MediaQuery.of(context).size.width / 3.37,
+                      width: MediaQuery.of(context).size.width / 3.40,
                       decoration: BoxDecoration(
                           color: Color(0xFFC2E3FE),
                           borderRadius: BorderRadius.circular(20)),
@@ -232,7 +232,7 @@ class SpicesView extends StatelessWidget {
                             child: Text("Black Pepper",
                                 style: TextStyle(
                                     color: Color(0xFF6A8CAA),
-                                    fontSize: 20,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold)),
                           )
                         ],
@@ -256,7 +256,7 @@ class SpicesView extends StatelessWidget {
                     "See All",
                     style: TextStyle(
                         color: Colors.blue,
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold),
                   ),
                 ),

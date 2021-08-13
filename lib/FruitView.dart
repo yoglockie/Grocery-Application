@@ -22,7 +22,7 @@ class FruitView extends StatelessWidget {
                   },
                   child: Container(
                     height: 150,
-                    width: MediaQuery.of(context).size.width / 3.37,
+                    width: MediaQuery.of(context).size.width / 3.40,
                     decoration: BoxDecoration(
                         color: Color(0xFFFFE9C6),
                         borderRadius: BorderRadius.circular(20)),
@@ -44,7 +44,7 @@ class FruitView extends StatelessWidget {
                           child: Text("Banana",
                               style: TextStyle(
                                   color: Color(0xFFDA9551),
-                                  fontSize: 20,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.bold)),
                         ),
                       ],
@@ -58,7 +58,7 @@ class FruitView extends StatelessWidget {
                     },
                     child: Container(
                       height: 150,
-                      width: MediaQuery.of(context).size.width / 3.37,
+                      width: MediaQuery.of(context).size.width / 3.40,
                       decoration: BoxDecoration(
                           color: Color(0xFFFFE9C6),
                           borderRadius: BorderRadius.circular(20)),
@@ -80,7 +80,7 @@ class FruitView extends StatelessWidget {
                             child: Text("Apple",
                                 style: TextStyle(
                                     color: Color(0xFFDA9551),
-                                    fontSize: 20,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold)),
                           )
                         ],
@@ -95,7 +95,7 @@ class FruitView extends StatelessWidget {
                     },
                     child: Container(
                       height: 150,
-                      width: MediaQuery.of(context).size.width / 3.37,
+                      width: MediaQuery.of(context).size.width / 3.40,
                       decoration: BoxDecoration(
                           color: Color(0xFFFFE9C6),
                           borderRadius: BorderRadius.circular(20)),
@@ -114,10 +114,10 @@ class FruitView extends StatelessWidget {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(top: 12.0),
-                            child: Text("Pomegranate",
+                            child: Text("P.Granate",
                                 style: TextStyle(
                                     color: Color(0xFFDA9551),
-                                    fontSize: 20,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold)),
                           ),
                         ],
@@ -139,7 +139,7 @@ class FruitView extends StatelessWidget {
                     },
                     child: Container(
                       height: 150,
-                      width: MediaQuery.of(context).size.width / 3.37,
+                      width: MediaQuery.of(context).size.width / 3.40,
                       decoration: BoxDecoration(
                           color: Color(0xFFFFE9C6),
                           borderRadius: BorderRadius.circular(20)),
@@ -161,7 +161,7 @@ class FruitView extends StatelessWidget {
                             child: Text("Grapes",
                                 style: TextStyle(
                                     color: Color(0xFFDA9551),
-                                    fontSize: 20,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold)),
                           ),
                         ],
@@ -174,7 +174,7 @@ class FruitView extends StatelessWidget {
                     },
                     child: Container(
                       height: 150,
-                      width: MediaQuery.of(context).size.width / 3.37,
+                      width: MediaQuery.of(context).size.width / 3.40,
                       decoration: BoxDecoration(
                           color: Color(0xFFFFE9C6),
                           borderRadius: BorderRadius.circular(20)),
@@ -196,7 +196,7 @@ class FruitView extends StatelessWidget {
                             child: Text("Mango",
                                 style: TextStyle(
                                     color: Color(0xFFDA9551),
-                                    fontSize: 20,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold)),
                           )
                         ],
@@ -209,7 +209,7 @@ class FruitView extends StatelessWidget {
                     },
                     child: Container(
                       height: 150,
-                      width: MediaQuery.of(context).size.width / 3.37,
+                      width: MediaQuery.of(context).size.width / 3.40,
                       decoration: BoxDecoration(
                           color: Color(0xFFFFE9C6),
                           borderRadius: BorderRadius.circular(20)),
@@ -231,7 +231,7 @@ class FruitView extends StatelessWidget {
                             child: Text("Papaya",
                                 style: TextStyle(
                                     color: Color(0xFFDA9551),
-                                    fontSize: 20,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold)),
                           )
                         ],
@@ -255,7 +255,7 @@ class FruitView extends StatelessWidget {
                     "See All",
                     style: TextStyle(
                         color: Colors.blue,
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold),
                   ),
                 ),

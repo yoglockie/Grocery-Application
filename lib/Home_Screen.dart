@@ -173,7 +173,7 @@ class _HomePageState extends State<HomePage>
               },
             ),
             ListTile(
-              leading: Icon(Icons.circle, color: Colors.blue),
+              leading: Icon(Icons.circle_outlined, color: Colors.blue),
               title: Text(
                 'Vegetables',
                 style: TextStyle(fontSize: 18, color: Colors.blue),
@@ -186,7 +186,7 @@ class _HomePageState extends State<HomePage>
               },
             ),
             ListTile(
-              leading: Icon(Icons.circle, color: Colors.blue),
+              leading: Icon(Icons.circle_sharp, color: Colors.blue),
               title: Text(
                 'Spices',
                 style: TextStyle(fontSize: 18, color: Colors.blue),

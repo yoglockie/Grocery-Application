@@ -582,7 +582,7 @@ _buildFinalItemView(BuildContext context, String itemFinalImgPath,
                           style: GoogleFonts.firaSans(
                             decoration: TextDecoration.none,
                             color: Colors.black54,
-                            fontSize: 40,
+                            fontSize: 35,
                             fontWeight: FontWeight.w500,
                           )),
                       Padding(
@@ -779,8 +779,8 @@ class _ItemFinalandPaymentState extends State<ItemFinalandPayment> {
       'name': widget.lItemName,
       'description': '1Kg will be delivered to your address',
       'prefill': {
-        'contact': '8239479183',
-        'email': 'yogilokesh@gmail.com',
+        'contact': '',
+        'email': '',
       },
       'external': {
         'wallets': ['paytm']
@@ -818,7 +818,7 @@ class _ItemFinalandPaymentState extends State<ItemFinalandPayment> {
             padding: const EdgeInsets.only(left: 10.0, right: 220),
             child: Text("Checkout",
                 style: GoogleFonts.nunitoSans(
-                    fontSize: 30,
+                    fontSize: 22,
                     color: Colors.blue[900],
                     fontWeight: FontWeight.bold)),
           ),

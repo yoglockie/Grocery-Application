@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:major_project/FinalItemView.dart';
 import 'package:major_project/MoreAll.dart';
 
 class MoreView extends StatelessWidget {
@@ -14,96 +15,111 @@ class MoreView extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  height: 150,
-                  width: MediaQuery.of(context).size.width / 3.37,
-                  decoration: BoxDecoration(
-                      color: Color(0xFFFFE9C6),
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 75,
-                        width: 75,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/oils.png"),
-                                fit: BoxFit.contain),
-                            shape: BoxShape.circle,
-                            color: Colors.white),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Oils()));
+                    },
+                    child: Container(
+                      height: 150,
+                      width: MediaQuery.of(context).size.width / 3.40,
+                      decoration: BoxDecoration(
+                          color: Color(0xFFFFE9C6),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 75,
+                            width: 75,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage("assets/oils.png"),
+                                    fit: BoxFit.contain),
+                                shape: BoxShape.circle,
+                                color: Colors.white),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12.0),
+                            child: Text("Oils",
+                                style: TextStyle(
+                                    color: Color(0xFFDA9551),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold)),
+                          ),
+                        ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 12.0),
-                        child: Text("Oils",
-                            style: TextStyle(
-                                color: Color(0xFFDA9551),
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold)),
+                    )),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Snacks()));
+                    },
+                    child: Container(
+                      height: 150,
+                      width: MediaQuery.of(context).size.width / 3.40,
+                      decoration: BoxDecoration(
+                          color: Color(0xFFFFE9C6),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 75,
+                            width: 75,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage("assets/snacks.png"),
+                                    fit: BoxFit.contain),
+                                shape: BoxShape.circle,
+                                color: Colors.white),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12.0),
+                            child: Text("Snacks",
+                                style: TextStyle(
+                                    color: Color(0xFFDA9551),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold)),
+                          )
+                        ],
                       ),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 150,
-                  width: MediaQuery.of(context).size.width / 3.37,
-                  decoration: BoxDecoration(
-                      color: Color(0xFFFFE9C6),
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 75,
-                        width: 75,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/snacks.png"),
-                                fit: BoxFit.contain),
-                            shape: BoxShape.circle,
-                            color: Colors.white),
+                    )),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Flour()));
+                    },
+                    child: Container(
+                      height: 150,
+                      width: MediaQuery.of(context).size.width / 3.40,
+                      decoration: BoxDecoration(
+                          color: Color(0xFFFFE9C6),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 75,
+                            width: 75,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage("assets/flour.png"),
+                                    fit: BoxFit.contain),
+                                shape: BoxShape.circle,
+                                color: Colors.white),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12.0),
+                            child: Text("Flour",
+                                style: TextStyle(
+                                    color: Color(0xFFDA9551),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold)),
+                          )
+                        ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 12.0),
-                        child: Text("Snacks",
-                            style: TextStyle(
-                                color: Color(0xFFDA9551),
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold)),
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 150,
-                  width: MediaQuery.of(context).size.width / 3.37,
-                  decoration: BoxDecoration(
-                      color: Color(0xFFFFE9C6),
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 75,
-                        width: 75,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/flour.png"),
-                                fit: BoxFit.contain),
-                            shape: BoxShape.circle,
-                            color: Colors.white),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 12.0),
-                        child: Text("Flour",
-                            style: TextStyle(
-                                color: Color(0xFFDA9551),
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold)),
-                      )
-                    ],
-                  ),
-                ),
+                    )),
               ],
             ),
           ), //1
@@ -113,66 +129,76 @@ class MoreView extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  height: 150,
-                  width: MediaQuery.of(context).size.width / 3.37,
-                  decoration: BoxDecoration(
-                      color: Color(0xFFFFE9C6),
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 75,
-                        width: 75,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/dairy.png"),
-                                fit: BoxFit.contain),
-                            shape: BoxShape.circle,
-                            color: Colors.white),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Dairy()));
+                    },
+                    child: Container(
+                      height: 150,
+                      width: MediaQuery.of(context).size.width / 3.40,
+                      decoration: BoxDecoration(
+                          color: Color(0xFFFFE9C6),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 75,
+                            width: 75,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage("assets/dairy.png"),
+                                    fit: BoxFit.contain),
+                                shape: BoxShape.circle,
+                                color: Colors.white),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12.0),
+                            child: Text("Dairy",
+                                style: TextStyle(
+                                    color: Color(0xFFDA9551),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold)),
+                          ),
+                        ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 12.0),
-                        child: Text("Dairy",
-                            style: TextStyle(
-                                color: Color(0xFFDA9551),
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold)),
+                    )),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Souce()));
+                    },
+                    child: Container(
+                      height: 150,
+                      width: MediaQuery.of(context).size.width / 3.40,
+                      decoration: BoxDecoration(
+                          color: Color(0xFFFFE9C6),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 75,
+                            width: 75,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage("assets/souces.png"),
+                                    fit: BoxFit.contain),
+                                shape: BoxShape.circle,
+                                color: Colors.white),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12.0),
+                            child: Text("Souces",
+                                style: TextStyle(
+                                    color: Color(0xFFDA9551),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold)),
+                          )
+                        ],
                       ),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 150,
-                  width: MediaQuery.of(context).size.width / 3.37,
-                  decoration: BoxDecoration(
-                      color: Color(0xFFFFE9C6),
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 75,
-                        width: 75,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/souces.png"),
-                                fit: BoxFit.contain),
-                            shape: BoxShape.circle,
-                            color: Colors.white),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 12.0),
-                        child: Text("Souces",
-                            style: TextStyle(
-                                color: Color(0xFFDA9551),
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold)),
-                      )
-                    ],
-                  ),
-                ),
+                    )),
                 InkWell(
                   onTap: () {
                     Navigator.push(context,
@@ -180,7 +206,7 @@ class MoreView extends StatelessWidget {
                   },
                   child: Container(
                     height: 150,
-                    width: MediaQuery.of(context).size.width / 3.37,
+                    width: MediaQuery.of(context).size.width / 3.40,
                     decoration: BoxDecoration(
                         color: Color(0xFFFFE9C6),
                         borderRadius: BorderRadius.circular(20)),
@@ -202,7 +228,7 @@ class MoreView extends StatelessWidget {
                           child: Text("Other Items",
                               style: TextStyle(
                                   color: Color(0xFFDA9551),
-                                  fontSize: 20,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.bold)),
                         )
                       ],
@@ -227,7 +253,7 @@ class MoreView extends StatelessWidget {
                     "See All",
                     style: TextStyle(
                         color: Colors.blue,
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold),
                   ),
                 ),
