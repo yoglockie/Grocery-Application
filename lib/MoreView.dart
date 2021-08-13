@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:major_project/MoreAll.dart';
 
 class MoreView extends StatelessWidget {
   const MoreView({Key? key}) : super(key: key);
@@ -172,34 +173,40 @@ class MoreView extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  height: 150,
-                  width: MediaQuery.of(context).size.width / 3.37,
-                  decoration: BoxDecoration(
-                      color: Color(0xFFFFE9C6),
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 75,
-                        width: 75,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/otheritems.png"),
-                                fit: BoxFit.contain),
-                            shape: BoxShape.circle,
-                            color: Colors.white),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 12.0),
-                        child: Text("Other Items",
-                            style: TextStyle(
-                                color: Color(0xFFDA9551),
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold)),
-                      )
-                    ],
+                InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => MoreAll()));
+                  },
+                  child: Container(
+                    height: 150,
+                    width: MediaQuery.of(context).size.width / 3.37,
+                    decoration: BoxDecoration(
+                        color: Color(0xFFFFE9C6),
+                        borderRadius: BorderRadius.circular(20)),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 75,
+                          width: 75,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/otheritems.png"),
+                                  fit: BoxFit.contain),
+                              shape: BoxShape.circle,
+                              color: Colors.white),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 12.0),
+                          child: Text("Other Items",
+                              style: TextStyle(
+                                  color: Color(0xFFDA9551),
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold)),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -212,7 +219,10 @@ class MoreView extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.only(left: 250.0, top: 10),
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => MoreAll()));
+                  },
                   child: Text(
                     "See All",
                     style: TextStyle(

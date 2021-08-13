@@ -1,10 +1,14 @@
+//line 9-541 = item classes
+// line 542 -751 = final Item view
+// line 752 -last = payment page view
+
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:major_project/variables.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 
-//fruits line 5-155
+//fruits line 5-156
 class Banana extends StatefulWidget {
   const Banana({Key? key}) : super(key: key);
 
@@ -155,7 +159,7 @@ class _KiwiState extends State<Kiwi> {
   }
 }
 
-//vegetables
+//vegetables 158-308
 
 class Tomato extends StatefulWidget {
   const Tomato({Key? key}) : super(key: key);
@@ -304,6 +308,235 @@ class _CucumberState extends State<Cucumber> {
   Widget build(BuildContext context) {
     return _buildFinalItemView(context, cucumberimgFinal, cucumber,
         cucumberPrice, cucumberCutPrice, cucumberdesc);
+  }
+}
+
+//spices line no. 311-460
+
+class Garlic extends StatefulWidget {
+  const Garlic({Key? key}) : super(key: key);
+
+  @override
+  _GarlicState createState() => _GarlicState();
+}
+
+class _GarlicState extends State<Garlic> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(context, garlicimgFinal, garlic, garlicPrice,
+        garlicCutPrice, garlicdesc);
+  }
+}
+
+class Turmeric extends StatefulWidget {
+  const Turmeric({Key? key}) : super(key: key);
+
+  @override
+  _TurmericState createState() => _TurmericState();
+}
+
+class _TurmericState extends State<Turmeric> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(context, turmericimgFinal, turmeric,
+        turmericPrice, turmericCutPrice, turmericdesc);
+  }
+}
+
+class Chilli extends StatefulWidget {
+  const Chilli({Key? key}) : super(key: key);
+
+  @override
+  _ChilliState createState() => _ChilliState();
+}
+
+class _ChilliState extends State<Chilli> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(context, chilliimgFinal, chilli, chilliPrice,
+        chilliCutPrice, chillidesc);
+  }
+}
+
+class CuminSeeds extends StatefulWidget {
+  const CuminSeeds({Key? key}) : super(key: key);
+
+  @override
+  _CuminSeedsState createState() => _CuminSeedsState();
+}
+
+class _CuminSeedsState extends State<CuminSeeds> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(
+        context, cuminimgFinal, cumin, cuminPrice, cuminCutPrice, cumindesc);
+  }
+}
+
+class Coriander extends StatefulWidget {
+  const Coriander({Key? key}) : super(key: key);
+
+  @override
+  _CorianderState createState() => _CorianderState();
+}
+
+class _CorianderState extends State<Coriander> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(context, corianderimgFinal, coriander,
+        corianderPrice, corianderCutPrice, corianderdesc);
+  }
+}
+
+class BlackPepper extends StatefulWidget {
+  const BlackPepper({Key? key}) : super(key: key);
+
+  @override
+  _BlackPepperState createState() => _BlackPepperState();
+}
+
+class _BlackPepperState extends State<BlackPepper> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(context, blackpepperimgFinal, blackpepper,
+        blackpepperPrice, blackpepperCutPrice, blackpepperdesc);
+  }
+}
+
+class Cinnamon extends StatefulWidget {
+  const Cinnamon({Key? key}) : super(key: key);
+
+  @override
+  _CinnamonState createState() => _CinnamonState();
+}
+
+class _CinnamonState extends State<Cinnamon> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(context, cinnamonimgFinal, cinnamon,
+        cinnamonPrice, cinnamonCutPrice, cinnamondesc);
+  }
+}
+
+class Cardamom extends StatefulWidget {
+  const Cardamom({Key? key}) : super(key: key);
+
+  @override
+  _CardamomState createState() => _CardamomState();
+}
+
+class _CardamomState extends State<Cardamom> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(context, cardamomimgFinal, cardamom,
+        cardamomPrice, cardamomCutPrice, cardamomdesc);
+  }
+}
+
+class Saffron extends StatefulWidget {
+  const Saffron({Key? key}) : super(key: key);
+
+  @override
+  _SaffronState createState() => _SaffronState();
+}
+
+class _SaffronState extends State<Saffron> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(context, saffronimgFinal, saffron, saffronPrice,
+        saffronCutPrice, saffrondesc);
+  }
+}
+
+class Clove extends StatefulWidget {
+  const Clove({Key? key}) : super(key: key);
+
+  @override
+  _CloveState createState() => _CloveState();
+}
+
+class _CloveState extends State<Clove> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(
+        context, cloveimgFinal, clove, clovePrice, cloveCutPrice, clovedesc);
+  }
+}
+
+//other items 463-
+
+class Oils extends StatefulWidget {
+  const Oils({Key? key}) : super(key: key);
+
+  @override
+  _OilsState createState() => _OilsState();
+}
+
+class _OilsState extends State<Oils> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(
+        context, oilsimgFinal, oils, oilsPrice, oilsCutPrice, oilsdesc);
+  }
+}
+
+class Snacks extends StatefulWidget {
+  const Snacks({Key? key}) : super(key: key);
+
+  @override
+  _SnacksState createState() => _SnacksState();
+}
+
+class _SnacksState extends State<Snacks> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(context, snacksimgFinal, snacks, snacksPrice,
+        snacksCutPrice, snacksdesc);
+  }
+}
+
+class Flour extends StatefulWidget {
+  const Flour({Key? key}) : super(key: key);
+
+  @override
+  _FlourState createState() => _FlourState();
+}
+
+class _FlourState extends State<Flour> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(
+        context, flourimgFinal, flour, flourPrice, flourCutPrice, flourdesc);
+  }
+}
+
+class Dairy extends StatefulWidget {
+  const Dairy({Key? key}) : super(key: key);
+
+  @override
+  _DairyState createState() => _DairyState();
+}
+
+class _DairyState extends State<Dairy> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(
+        context, dairyimgFinal, dairy, dairyPrice, dairyCutPrice, dairydesc);
+  }
+}
+
+class Souce extends StatefulWidget {
+  const Souce({Key? key}) : super(key: key);
+
+  @override
+  _SouceState createState() => _SouceState();
+}
+
+class _SouceState extends State<Souce> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildFinalItemView(context, soucesimgFinal, souces, soucesPrice,
+        soucesCutPrice, soucesdesc);
   }
 }
 
@@ -457,26 +690,7 @@ _buildFinalItemView(BuildContext context, String itemFinalImgPath,
                     children: [
                       Padding(
                           padding: const EdgeInsets.only(left: 15.0),
-                          child:
-                              //   child: Container(
-                              //     width: MediaQuery.of(context).size.width / 2.2,
-                              //     height: 52,
-                              //     decoration: BoxDecoration(
-                              //       borderRadius: BorderRadius.circular(15),
-                              //       color: Colors.lightGreen,
-                              //     ),
-                              //     child: Center(
-                              //       child: Text("Add to Cart",
-                              //           style: GoogleFonts.firaSans(
-                              //             decoration: TextDecoration.none,
-                              //             fontSize: 20,
-                              //             color: Colors.white,
-                              //             //
-                              //           )),
-                              //     ),
-                              //   ),
-                              // ),
-                              Padding(
+                          child: Padding(
                             padding: const EdgeInsets.only(right: 15.0),
                             child: GestureDetector(
                               onTap: () {

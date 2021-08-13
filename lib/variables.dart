@@ -180,3 +180,140 @@ String cucumberimgInit = 'assets/cucumber.png';
 String cucumberimgFinal = 'assets/cucumberfinal.png';
 String cucumberdesc =
     'The pineapple is a tropical plant with an edible fruit and the most economically significant plant in the family Bromeliaceae.';
+
+//spices line 186-
+
+//garlic
+String garlic = 'Garlic';
+String garlicPrice = '30';
+String garlicCutPrice = '40';
+String garlicimgInit = 'assets/garlic.png';
+String garlicimgFinal = 'assets/garlicfinal.png';
+String garlicdesc =
+    'A banana is an elongated, edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa. In some countries, bananas used for cooking may be called "plantains", distinguishing them from dessert bananas.';
+
+//turmeric
+String turmeric = 'Turmeric';
+String turmericPrice = '60';
+String turmericCutPrice = '80';
+String turmericimgInit = 'assets/turmeric.png';
+String turmericimgFinal = 'assets/turmericfinal.png';
+String turmericdesc =
+    'A mango is an edible stone fruit produced by the tropical tree Mangifera indica which is believed to have originated from the region between northwestern Myanmar, Bangladesh, and northeastern India.';
+
+//chilli
+String chilli = 'Chilli';
+String chilliPrice = '90';
+String chilliCutPrice = '120';
+String chilliimgInit = 'assets/chilli.png';
+String chilliimgFinal = 'assets/chillifinal.png';
+String chillidesc =
+    'An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. ';
+
+//cumin
+String cumin = 'Cumin Seeds';
+String cuminPrice = '120';
+String cuminCutPrice = '150';
+String cuminimgInit = 'assets/cuminseeds.png';
+String cuminimgFinal = 'assets/cuminseedsfinal.png';
+String cumindesc =
+    'The pomegranate is a fruit-bearing deciduous shrub in the family Lythraceae, subfamily Punicoideae, that grows between 5 and 10 m tall.';
+
+//coriander
+String coriander = 'Coriander';
+String corianderPrice = '40';
+String corianderCutPrice = '59';
+String corianderimgInit = 'assets/coriander.png';
+String corianderimgFinal = 'assets/corianderfinal.png';
+String corianderdesc =
+    'A grape is a fruit, botanically a berry, of the deciduous woody vines of the flowering plant genus Vitis. Grapes can be eaten fresh as table grapes, used for making wine, jam, grape juice, jelly';
+
+//blackpepper
+String blackpepper = 'Black Pepper';
+String blackpepperPrice = '80';
+String blackpepperCutPrice = '99';
+String blackpepperimgInit = 'assets/blackpepper.png';
+String blackpepperimgFinal = 'assets/blackpepperfinal.png';
+String blackpepperdesc =
+    'The papaya, papaw, or pawpaw is the plant Carica papaya, one of the 22 accepted species in the genus Carica of the family Caricaceae.';
+
+//cinnamon
+String cinnamon = 'Cinnamon';
+String cinnamonPrice = '370';
+String cinnamonCutPrice = '399';
+String cinnamonimgInit = 'assets/cinnamon.png';
+String cinnamonimgFinal = 'assets/cinnamonfinal.png';
+String cinnamondesc =
+    'A cherry is the fruit of many plants of the genus Prunus, and is a fleshy drupe. Commercial cherries are obtained from cultivars of several species';
+
+//cardamom
+String cardamom = 'Cardamom';
+String cardamomPrice = '540';
+String cardamomCutPrice = '600';
+String cardamomimgInit = 'assets/cardamom.png';
+String cardamomimgFinal = 'assets/cardamomfinal.png';
+String cardamomdesc =
+    'Kiwifruit or Chinese gooseberry is the edible berry of several species of woody vines in the genus Actinidia. The most common cultivar group of kiwifruit is oval';
+
+//saffron
+String saffron = 'Saffron';
+String saffronPrice = '40';
+String saffronCutPrice = '60';
+String saffronimgInit = 'assets/saffron.png';
+String saffronimgFinal = 'assets/saffronfinal.png';
+String saffrondesc =
+    'The orange is the fruit of various citrus species in the family Rutaceae; it primarily refers to Citrus × sinensis, which is also called sweet orange';
+
+//clove
+String clove = 'Clove';
+String clovePrice = '70';
+String cloveCutPrice = '99';
+String cloveimgInit = 'assets/clove.png';
+String cloveimgFinal = 'assets/clovefinal.png';
+String clovedesc =
+    'The pineapple is a tropical plant with an edible fruit and the most economically significant plant in the family Bromeliaceae.';
+
+//oils
+String oils = 'Oils';
+String oilsPrice = '30';
+String oilsCutPrice = '40';
+String oilsimgInit = 'assets/oils.png';
+String oilsimgFinal = 'assets/oilsfinal.png';
+String oilsdesc =
+    'A banana is an elongated, edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa. In some countries, bananas used for cooking may be called "plantains", distinguishing them from dessert bananas.';
+
+//snacks
+String snacks = 'Snacks';
+String snacksPrice = '60';
+String snacksCutPrice = '80';
+String snacksimgInit = 'assets/snacks.png';
+String snacksimgFinal = 'assets/snacksfinal.png';
+String snacksdesc =
+    'A mango is an edible stone fruit produced by the tropical tree Mangifera indica which is believed to have originated from the region between northwestern Myanmar, Bangladesh, and northeastern India.';
+
+//flour
+String flour = 'Flour';
+String flourPrice = '90';
+String flourCutPrice = '120';
+String flourimgInit = 'assets/flour.png';
+String flourimgFinal = 'assets/flourfinal.png';
+String flourdesc =
+    'An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. ';
+
+//dairy
+String dairy = 'Milk';
+String dairyPrice = '40';
+String dairyCutPrice = '59';
+String dairyimgInit = 'assets/dairy.png';
+String dairyimgFinal = 'assets/dairyfinal.png';
+String dairydesc =
+    'A grape is a fruit, botanically a berry, of the deciduous woody vines of the flowering plant genus Vitis. Grapes can be eaten fresh as table grapes, used for making wine, jam, grape juice, jelly';
+
+//souces
+String souces = 'Souce';
+String soucesPrice = '80';
+String soucesCutPrice = '99';
+String soucesimgInit = 'assets/souces.png';
+String soucesimgFinal = 'assets/soucesfinal.png';
+String soucesdesc =
+    'The papaya, papaw, or pawpaw is the plant Carica papaya, one of the 22 accepted species in the genus Carica of the family Caricaceae.';

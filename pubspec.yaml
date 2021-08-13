@@ -120,6 +120,22 @@ flutter:
     - assets/cucumberfinal.png
     - assets/useravtar.png
     - assets/usermenu.png
+    - assets/cardamomfinal.png
+    - assets/cinnamonfinal.png
+    - assets/saffronfinal.png
+    - assets/clovefinal.png
+    - assets/garlicfinal.png
+    - assets/turmericfinal.png
+    - assets/chillifinal.png
+    - assets/cuminseedsfinal.png
+    - assets/corianderfinal.png
+    - assets/blackpepperfinal.png
+    - assets/moread.png
+    - assets/oilsfinal.png
+    - assets/snacksfinal.png
+    - assets/flourfinal.png
+    - assets/dairyfinal.png
+    - assets/soucesfinal.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

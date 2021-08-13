@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:major_project/FinalItemView.dart';
 import 'package:major_project/SpicesAll.dart';
 
 class SpicesView extends StatelessWidget {
@@ -14,96 +15,111 @@ class SpicesView extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  height: 150,
-                  width: MediaQuery.of(context).size.width / 3.37,
-                  decoration: BoxDecoration(
-                      color: Color(0xFFC2E3FE),
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 75,
-                        width: 75,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/garlic.png"),
-                                fit: BoxFit.contain),
-                            shape: BoxShape.circle,
-                            color: Colors.white),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Garlic()));
+                    },
+                    child: Container(
+                      height: 150,
+                      width: MediaQuery.of(context).size.width / 3.37,
+                      decoration: BoxDecoration(
+                          color: Color(0xFFC2E3FE),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 75,
+                            width: 75,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage("assets/garlic.png"),
+                                    fit: BoxFit.contain),
+                                shape: BoxShape.circle,
+                                color: Colors.white),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12.0),
+                            child: Text("Garlic",
+                                style: TextStyle(
+                                    color: Color(0xFF6A8CAA),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold)),
+                          ),
+                        ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 12.0),
-                        child: Text("Garlic",
-                            style: TextStyle(
-                                color: Color(0xFF6A8CAA),
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold)),
+                    )),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Turmeric()));
+                    },
+                    child: Container(
+                      height: 150,
+                      width: MediaQuery.of(context).size.width / 3.37,
+                      decoration: BoxDecoration(
+                          color: Color(0xFFC2E3FE),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 75,
+                            width: 75,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage("assets/turmeric.png"),
+                                    fit: BoxFit.contain),
+                                shape: BoxShape.circle,
+                                color: Colors.white),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12.0),
+                            child: Text("Termeric",
+                                style: TextStyle(
+                                    color: Color(0xFF6A8CAA),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold)),
+                          )
+                        ],
                       ),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 150,
-                  width: MediaQuery.of(context).size.width / 3.37,
-                  decoration: BoxDecoration(
-                      color: Color(0xFFC2E3FE),
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 75,
-                        width: 75,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/turmeric.png"),
-                                fit: BoxFit.contain),
-                            shape: BoxShape.circle,
-                            color: Colors.white),
+                    )),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Chilli()));
+                    },
+                    child: Container(
+                      height: 150,
+                      width: MediaQuery.of(context).size.width / 3.37,
+                      decoration: BoxDecoration(
+                          color: Color(0xFFC2E3FE),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 75,
+                            width: 75,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage("assets/chilli.png"),
+                                    fit: BoxFit.contain),
+                                shape: BoxShape.circle,
+                                color: Colors.white),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12.0),
+                            child: Text("Chilli",
+                                style: TextStyle(
+                                    color: Color(0xFF6A8CAA),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold)),
+                          )
+                        ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 12.0),
-                        child: Text("Termeric",
-                            style: TextStyle(
-                                color: Color(0xFF6A8CAA),
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold)),
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 150,
-                  width: MediaQuery.of(context).size.width / 3.37,
-                  decoration: BoxDecoration(
-                      color: Color(0xFFC2E3FE),
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 75,
-                        width: 75,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/chilli.png"),
-                                fit: BoxFit.contain),
-                            shape: BoxShape.circle,
-                            color: Colors.white),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 12.0),
-                        child: Text("Chilli",
-                            style: TextStyle(
-                                color: Color(0xFF6A8CAA),
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold)),
-                      )
-                    ],
-                  ),
-                ),
+                    )),
               ],
             ),
           ), //1
@@ -113,96 +129,115 @@ class SpicesView extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  height: 150,
-                  width: MediaQuery.of(context).size.width / 3.37,
-                  decoration: BoxDecoration(
-                      color: Color(0xFFC2E3FE),
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 75,
-                        width: 75,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/cuminseeds.png"),
-                                fit: BoxFit.contain),
-                            shape: BoxShape.circle,
-                            color: Colors.white),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => CuminSeeds()));
+                    },
+                    child: Container(
+                      height: 150,
+                      width: MediaQuery.of(context).size.width / 3.37,
+                      decoration: BoxDecoration(
+                          color: Color(0xFFC2E3FE),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 75,
+                            width: 75,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage("assets/cuminseeds.png"),
+                                    fit: BoxFit.contain),
+                                shape: BoxShape.circle,
+                                color: Colors.white),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12.0),
+                            child: Text("Cumin Seeds",
+                                style: TextStyle(
+                                    color: Color(0xFF6A8CAA),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold)),
+                          ),
+                        ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 12.0),
-                        child: Text("Cumin Seeds",
-                            style: TextStyle(
-                                color: Color(0xFF6A8CAA),
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold)),
+                    )),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Coriander()));
+                    },
+                    child: Container(
+                      height: 150,
+                      width: MediaQuery.of(context).size.width / 3.37,
+                      decoration: BoxDecoration(
+                          color: Color(0xFFC2E3FE),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 75,
+                            width: 75,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage("assets/coriander.png"),
+                                    fit: BoxFit.contain),
+                                shape: BoxShape.circle,
+                                color: Colors.white),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12.0),
+                            child: Text("Coriander",
+                                style: TextStyle(
+                                    color: Color(0xFF6A8CAA),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold)),
+                          )
+                        ],
                       ),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 150,
-                  width: MediaQuery.of(context).size.width / 3.37,
-                  decoration: BoxDecoration(
-                      color: Color(0xFFC2E3FE),
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 75,
-                        width: 75,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/coriander.png"),
-                                fit: BoxFit.contain),
-                            shape: BoxShape.circle,
-                            color: Colors.white),
+                    )),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => BlackPepper()));
+                    },
+                    child: Container(
+                      height: 150,
+                      width: MediaQuery.of(context).size.width / 3.37,
+                      decoration: BoxDecoration(
+                          color: Color(0xFFC2E3FE),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 75,
+                            width: 75,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage("assets/blackpepper.png"),
+                                    fit: BoxFit.contain),
+                                shape: BoxShape.circle,
+                                color: Colors.white),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12.0),
+                            child: Text("Black Pepper",
+                                style: TextStyle(
+                                    color: Color(0xFF6A8CAA),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold)),
+                          )
+                        ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 12.0),
-                        child: Text("Coriander",
-                            style: TextStyle(
-                                color: Color(0xFF6A8CAA),
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold)),
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 150,
-                  width: MediaQuery.of(context).size.width / 3.37,
-                  decoration: BoxDecoration(
-                      color: Color(0xFFC2E3FE),
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 75,
-                        width: 75,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/blackpepper.png"),
-                                fit: BoxFit.contain),
-                            shape: BoxShape.circle,
-                            color: Colors.white),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 12.0),
-                        child: Text("Black Pepper",
-                            style: TextStyle(
-                                color: Color(0xFF6A8CAA),
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold)),
-                      )
-                    ],
-                  ),
-                ),
+                    )),
               ],
             ),
           ),

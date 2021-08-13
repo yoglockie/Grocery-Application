@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:major_project/FinalItemView.dart';
 
-class SpicesAll extends StatefulWidget {
-  const SpicesAll({Key? key}) : super(key: key);
+class MoreAll extends StatefulWidget {
+  const MoreAll({Key? key}) : super(key: key);
 
   @override
-  _SpicesAllState createState() => _SpicesAllState();
+  _MoreAllState createState() => _MoreAllState();
 }
 
-class _SpicesAllState extends State<SpicesAll> {
+class _MoreAllState extends State<MoreAll> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +37,7 @@ class _SpicesAllState extends State<SpicesAll> {
                       ),
                     ),
                     Text(
-                      "Spices",
+                      "Other",
                       style: TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.w900,
@@ -60,7 +60,7 @@ class _SpicesAllState extends State<SpicesAll> {
               height: 150,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage("assets/spicesad.png"),
+                      image: AssetImage("assets/moread.png"),
                       fit: BoxFit.contain)),
             ),
             SizedBox(
@@ -72,9 +72,9 @@ class _SpicesAllState extends State<SpicesAll> {
               child: Row(
                 children: [
                   _buildListItem(
-                      context, 'assets/garlic.png', '70', 'Garlic', Garlic()),
-                  _buildListItem(context, 'assets/turmeric.png', '30',
-                      'Turmeric', Turmeric()),
+                      context, 'assets/oils.png', '165', 'Oil', Oils()),
+                  _buildListItem(
+                      context, 'assets/snacks.png', '20', 'Snacks', Snacks()),
                 ],
               ),
             ),
@@ -84,45 +84,19 @@ class _SpicesAllState extends State<SpicesAll> {
               child: Row(
                 children: [
                   _buildListItem(
-                      context, 'assets/chilli.png', '20', 'Chilli', Chilli()),
-                  _buildListItem(context, 'assets/cuminseeds.png', '40',
-                      'Cumin Seeds', CuminSeeds()),
-                ],
-              ),
-            ),
-            Container(
-              height: 260,
-              width: MediaQuery.of(context).size.width,
-              child: Row(
-                children: [
-                  _buildListItem(context, 'assets/coriander.png', '15',
-                      'Coriander', Coriander()),
-                  _buildListItem(context, 'assets/blackpepper.png', '40',
-                      'Black Pepper', BlackPepper()),
-                ],
-              ),
-            ),
-            Container(
-              height: 260,
-              width: MediaQuery.of(context).size.width,
-              child: Row(
-                children: [
-                  _buildListItem(context, 'assets/cinnamon.png', '35',
-                      'Cinnamom', Cinnamon()),
-                  _buildListItem(context, 'assets/cardamom.png', '80',
-                      'Cardamom', Cardamom()),
-                ],
-              ),
-            ),
-            Container(
-              height: 260,
-              width: MediaQuery.of(context).size.width,
-              child: Row(
-                children: [
-                  _buildListItem(context, 'assets/saffron.png', '30', 'Saffron',
-                      Saffron()),
+                      context, 'assets/flour.png', '35', 'Flour', Flour()),
                   _buildListItem(
-                      context, 'assets/clove.png', '40', 'Clove', Clove()),
+                      context, 'assets/dairy.png', '30', 'Milk', Dairy()),
+                ],
+              ),
+            ),
+            Container(
+              height: 260,
+              width: MediaQuery.of(context).size.width,
+              child: Row(
+                children: [
+                  _buildListItem(
+                      context, 'assets/souces.png', '30', 'Souce', Souce()),
                 ],
               ),
             ),
