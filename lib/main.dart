@@ -5,14 +5,16 @@ import 'package:major_project/Home_Screen.dart';
 import 'package:major_project/login_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:major_project/user_preferences.dart';
 
-void main() async {
+Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
+  await UserPreferences.init();
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  static final String title = 'User Profile';
   final Future<FirebaseApp> _initialization = Firebase.initializeApp();
   final storage = new FlutterSecureStorage();
 

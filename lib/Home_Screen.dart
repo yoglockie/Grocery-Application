@@ -1,12 +1,18 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:major_project/FruitAll.dart';
 import 'package:major_project/FruitView.dart';
 
 //import 'package:major_project/LogOut.dart';
 
 import 'package:major_project/MoreView.dart';
+import 'package:major_project/SpicesAll.dart';
 import 'package:major_project/SpicesView.dart';
+import 'package:major_project/VegetableAll.dart';
 import 'package:major_project/VegetableView.dart';
+import 'package:major_project/login_page.dart';
 import 'package:major_project/pofile_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,7 +25,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
-
+  final storage = new FlutterSecureStorage();
   @override
   void initState() {
     super.initState();
@@ -50,7 +56,7 @@ class _HomePageState extends State<HomePage>
             child: Text(
               "GROCERIE",
               style: GoogleFonts.josefinSans(
-                  fontSize: 33,
+                  fontSize: 27,
                   fontWeight: FontWeight.w600,
                   color: Colors.blue[700]),
             ),
@@ -87,7 +93,129 @@ class _HomePageState extends State<HomePage>
           ],
         ),
       ),
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: Column(
+          children: [
+            Container(
+              height: 300,
+              width: double.infinity,
+              color: Colors.blue,
+              child: Center(
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 60.0),
+                      child: Container(
+                        height: 150,
+                        width: 150,
+                        decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.withOpacity(0.3),
+                                  blurRadius: 6.0,
+                                  spreadRadius: 4.0,
+                                  offset: Offset(0.0, 0.3))
+                            ],
+                            image: DecorationImage(
+                                image: NetworkImage(
+                                    "https://www.nicepng.com/png/full/144-1446162_pin-businessman-clipart-png-flat-user-icon.png"),
+                                fit: BoxFit.contain),
+                            shape: BoxShape.circle),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      "Welcome",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.home, color: Colors.blue),
+              title: Text(
+                'Home',
+                style: TextStyle(fontSize: 18, color: Colors.blue),
+              ),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const HomePage()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.person, color: Colors.blue),
+              title: Text(
+                'Profile',
+                style: TextStyle(fontSize: 18, color: Colors.blue),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ProfilePage()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.circle, color: Colors.blue),
+              title: Text(
+                'Fruits',
+                style: TextStyle(fontSize: 18, color: Colors.blue),
+              ),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const FruitAll()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.circle, color: Colors.blue),
+              title: Text(
+                'Vegetables',
+                style: TextStyle(fontSize: 18, color: Colors.blue),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const VegetableAll()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.circle, color: Colors.blue),
+              title: Text(
+                'Spices',
+                style: TextStyle(fontSize: 18, color: Colors.blue),
+              ),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const SpicesAll()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.logout, color: Colors.blue),
+              title: Text(
+                'Logout',
+                style: TextStyle(fontSize: 18, color: Colors.blue),
+              ),
+              onTap: () async => {
+                await FirebaseAuth.instance.signOut(),
+                await storage.delete(key: "uid"),
+                Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => LoginPage(),
+                    ),
+                    (route) => false)
+              },
+            ),
+          ],
+        ),
+      ),
       body: SafeArea(
         child: ListView(
           children: [

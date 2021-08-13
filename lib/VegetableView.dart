@@ -11,7 +11,7 @@ class VegetableView extends StatelessWidget {
       body: ListView(
         children: [
           Container(
-            height: MediaQuery.of(context).size.height / 4.5,
+            height: 150,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -21,8 +21,8 @@ class VegetableView extends StatelessWidget {
                           MaterialPageRoute(builder: (context) => Tomato()));
                     },
                     child: Container(
-                      height: MediaQuery.of(context).size.height / 4.5,
-                      width: 120,
+                      height: 150,
+                      width: MediaQuery.of(context).size.width / 3.37,
                       decoration: BoxDecoration(
                           color: Color(0xFFD7FADA),
                           borderRadius: BorderRadius.circular(20)),
@@ -58,8 +58,8 @@ class VegetableView extends StatelessWidget {
                               builder: (context) => Cauliflower()));
                     },
                     child: Container(
-                      height: MediaQuery.of(context).size.height / 4.5,
-                      width: MediaQuery.of(context).size.height / 5.5,
+                      height: 150,
+                      width: MediaQuery.of(context).size.width / 3.37,
                       decoration: BoxDecoration(
                           color: Color(0xFFD7FADA),
                           borderRadius: BorderRadius.circular(20)),
@@ -93,8 +93,8 @@ class VegetableView extends StatelessWidget {
                           MaterialPageRoute(builder: (context) => Potato()));
                     },
                     child: Container(
-                      height: MediaQuery.of(context).size.height / 4.5,
-                      width: 120,
+                      height: 150,
+                      width: MediaQuery.of(context).size.width / 3.37,
                       decoration: BoxDecoration(
                           color: Color(0xFFD7FADA),
                           borderRadius: BorderRadius.circular(20)),
@@ -127,7 +127,7 @@ class VegetableView extends StatelessWidget {
           ), //1
           SizedBox(height: 10),
           Container(
-            height: MediaQuery.of(context).size.height / 4.5,
+            height: 150,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -137,8 +137,8 @@ class VegetableView extends StatelessWidget {
                           MaterialPageRoute(builder: (context) => Onion()));
                     },
                     child: Container(
-                      height: MediaQuery.of(context).size.height / 4.5,
-                      width: MediaQuery.of(context).size.height / 5.5,
+                      height: 150,
+                      width: MediaQuery.of(context).size.width / 3.37,
                       decoration: BoxDecoration(
                           color: Color(0xFFD7FADA),
                           borderRadius: BorderRadius.circular(20)),
@@ -172,7 +172,7 @@ class VegetableView extends StatelessWidget {
                           MaterialPageRoute(builder: (context) => Broccoli()));
                     },
                     child: Container(
-                      height: MediaQuery.of(context).size.height / 4.5,
+                      height: 150,
                       width: 120,
                       decoration: BoxDecoration(
                           color: Color(0xFFD7FADA),
@@ -207,8 +207,8 @@ class VegetableView extends StatelessWidget {
                           MaterialPageRoute(builder: (context) => Pea()));
                     },
                     child: Container(
-                      height: MediaQuery.of(context).size.height / 4.5,
-                      width: 120,
+                      height: 150,
+                      width: MediaQuery.of(context).size.width / 3.37,
                       decoration: BoxDecoration(
                           color: Color(0xFFD7FADA),
                           borderRadius: BorderRadius.circular(20)),
@@ -244,7 +244,7 @@ class VegetableView extends StatelessWidget {
               height: 50,
               width: MediaQuery.of(context).size.width,
               child: Padding(
-                padding: const EdgeInsets.only(left: 300.0, top: 10),
+                padding: const EdgeInsets.only(left: 250.0, top: 10),
                 child: InkWell(
                   onTap: () {
                     Navigator.push(
@@ -262,7 +262,7 @@ class VegetableView extends StatelessWidget {
                 ),
               )),
           SizedBox(
-            height: 20,
+            height: 40,
           )
         ],
       ),

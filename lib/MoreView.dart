@@ -15,7 +15,7 @@ class MoreView extends StatelessWidget {
               children: [
                 Container(
                   height: 150,
-                  width: 120,
+                  width: MediaQuery.of(context).size.width / 3.37,
                   decoration: BoxDecoration(
                       color: Color(0xFFFFE9C6),
                       borderRadius: BorderRadius.circular(20)),
@@ -45,7 +45,7 @@ class MoreView extends StatelessWidget {
                 ),
                 Container(
                   height: 150,
-                  width: 120,
+                  width: MediaQuery.of(context).size.width / 3.37,
                   decoration: BoxDecoration(
                       color: Color(0xFFFFE9C6),
                       borderRadius: BorderRadius.circular(20)),
@@ -75,7 +75,7 @@ class MoreView extends StatelessWidget {
                 ),
                 Container(
                   height: 150,
-                  width: 120,
+                  width: MediaQuery.of(context).size.width / 3.37,
                   decoration: BoxDecoration(
                       color: Color(0xFFFFE9C6),
                       borderRadius: BorderRadius.circular(20)),
@@ -114,7 +114,7 @@ class MoreView extends StatelessWidget {
               children: [
                 Container(
                   height: 150,
-                  width: 120,
+                  width: MediaQuery.of(context).size.width / 3.37,
                   decoration: BoxDecoration(
                       color: Color(0xFFFFE9C6),
                       borderRadius: BorderRadius.circular(20)),
@@ -144,7 +144,7 @@ class MoreView extends StatelessWidget {
                 ),
                 Container(
                   height: 150,
-                  width: 120,
+                  width: MediaQuery.of(context).size.width / 3.37,
                   decoration: BoxDecoration(
                       color: Color(0xFFFFE9C6),
                       borderRadius: BorderRadius.circular(20)),
@@ -174,7 +174,7 @@ class MoreView extends StatelessWidget {
                 ),
                 Container(
                   height: 150,
-                  width: 120,
+                  width: MediaQuery.of(context).size.width / 3.37,
                   decoration: BoxDecoration(
                       color: Color(0xFFFFE9C6),
                       borderRadius: BorderRadius.circular(20)),
@@ -210,7 +210,7 @@ class MoreView extends StatelessWidget {
               height: 50,
               width: MediaQuery.of(context).size.width,
               child: Padding(
-                padding: const EdgeInsets.only(left: 300.0, top: 10),
+                padding: const EdgeInsets.only(left: 250.0, top: 10),
                 child: InkWell(
                   onTap: () {},
                   child: Text(
@@ -223,7 +223,7 @@ class MoreView extends StatelessWidget {
                 ),
               )),
           SizedBox(
-            height: 20,
+            height: 40,
           )
         ],
       ),

@@ -2,6 +2,10 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:major_project/button_widget.dart';
+import 'package:major_project/textfield_widget.dart';
+import 'package:major_project/user.dart';
+import 'package:major_project/user_preferences.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -13,6 +17,7 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
+    final user = UserPreferences.getUser();
     return SafeArea(
       child: Scaffold(
           body: Stack(
@@ -50,39 +55,6 @@ class _ProfilePageState extends State<ProfilePage> {
                       fit: BoxFit.cover)),
             ),
           ),
-          // Positioned(
-          //   top: MediaQuery.of(context).size.height / 2.15,
-          //   left: MediaQuery.of(context).size.width / 2.9,
-          //   child: Text(
-          //     "User29",
-          //     style: GoogleFonts.rubik(
-          //         fontSize: 30,
-          //         color: Colors.blue,
-          //         fontWeight: FontWeight.bold),
-          //   ),
-          // ),
-          // Positioned(
-          //   top: MediaQuery.of(context).size.height / 1.9,
-          //   left: MediaQuery.of(context).size.width / 3.2,
-          //   child: Text("lokesh@gmail.com",
-          //       style: GoogleFonts.rubik(
-          //         fontSize: 20,
-          //         color: Colors.blue,
-          //       )),
-          // ),
-          // Positioned(
-          //   top: MediaQuery.of(context).size.height / 1.6,
-          //   left: MediaQuery.of(context).size.width / 3.2,
-          //   child: Container(
-          //     child: Center(
-          //       child: Text("Anwarpura, Bagri, Peeplu, Tonk 304801 ",
-          //           style: GoogleFonts.rubik(
-          //             fontSize: 20,
-          //             color: Colors.blue,
-          //           )),
-          //     ),
-          //   ),
-          // ),
           Positioned(
             top: MediaQuery.of(context).size.height / 2.18,
             child: Container(
@@ -93,42 +65,11 @@ class _ProfilePageState extends State<ProfilePage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Text(
-                      "User29",
-                      style: GoogleFonts.rubik(
-                          fontSize: 30,
-                          color: Colors.blue,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text("lokesh@gmail.com",
-                        style: GoogleFonts.rubik(
-                          fontSize: 20,
-                          color: Colors.blue,
-                        )),
+                    buildNameEmail(user),
                     SizedBox(
                       height: 30,
                     ),
-                    Text("Mo. - 82394790183",
-                        style: GoogleFonts.rubik(
-                          fontSize: 20,
-                          color: Colors.blue,
-                        )),
-                    SizedBox(
-                      height: 30,
-                    ),
-                    Text("Anwarpura,Tonk",
-                        style: GoogleFonts.rubik(
-                          fontSize: 20,
-                          color: Colors.blue,
-                        )),
-                    Text("304801",
-                        style: GoogleFonts.rubik(
-                          fontSize: 20,
-                          color: Colors.blue,
-                        )),
+                    buildCityMo(user),
                     SizedBox(
                       height: 50,
                     ),
@@ -185,6 +126,44 @@ class _ProfilePageState extends State<ProfilePage> {
   }
 }
 
+Widget buildNameEmail(User user) {
+  return Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+    Text(
+      user.name,
+      style: GoogleFonts.rubik(
+          fontSize: 30, color: Colors.blue, fontWeight: FontWeight.bold),
+    ),
+    SizedBox(
+      height: 10,
+    ),
+    Text(user.email,
+        style: GoogleFonts.rubik(
+          fontSize: 20,
+          color: Colors.blue,
+        ))
+  ]);
+}
+
+Widget buildCityMo(User user) {
+  return Column(
+    children: [
+      Text(user.mobile,
+          style: GoogleFonts.rubik(
+            fontSize: 20,
+            color: Colors.blue,
+          )),
+      SizedBox(
+        height: 30,
+      ),
+      Text(user.city,
+          style: GoogleFonts.rubik(
+            fontSize: 20,
+            color: Colors.blue,
+          )),
+    ],
+  );
+}
+
 class EditProfile extends StatefulWidget {
   const EditProfile({Key? key}) : super(key: key);
 
@@ -193,6 +172,15 @@ class EditProfile extends StatefulWidget {
 }
 
 class _EditProfileState extends State<EditProfile> {
+  late User user;
+
+  @override
+  void initState() {
+    super.initState();
+
+    user = UserPreferences.getUser();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -219,11 +207,10 @@ class _EditProfileState extends State<EditProfile> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30.0),
-              child: TextFormField(
-                decoration: InputDecoration(
-                    labelText: "Name",
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15))),
+              child: TextFieldWidget(
+                label: 'Full Name',
+                text: user.name,
+                onChanged: (name) => user = user.copy(name: name),
               ),
             ),
             SizedBox(
@@ -231,12 +218,10 @@ class _EditProfileState extends State<EditProfile> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30.0),
-              child: TextFormField(
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                    labelText: "Phone Number",
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15))),
+              child: TextFieldWidget(
+                label: 'Username',
+                text: user.email,
+                onChanged: (email) => user = user.copy(email: email),
               ),
             ),
             SizedBox(
@@ -244,12 +229,10 @@ class _EditProfileState extends State<EditProfile> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30.0),
-              child: TextFormField(
-                //keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                    labelText: "City",
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15))),
+              child: TextFieldWidget(
+                label: 'Phone No.',
+                text: user.mobile,
+                onChanged: (mobile) => user = user.copy(mobile: mobile),
               ),
             ),
             SizedBox(
@@ -257,45 +240,23 @@ class _EditProfileState extends State<EditProfile> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30.0),
-              child: TextFormField(
-                //keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                    labelText: "Colony",
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15))),
-              ),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30.0),
-              child: TextFormField(
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                    labelText: "Pincode",
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15))),
+              child: TextFieldWidget(
+                label: 'City',
+                text: user.city,
+                maxLines: 1,
+                onChanged: (city) => user = user.copy(city: city),
               ),
             ),
             SizedBox(
               height: 60,
             ),
-            SizedBox(
-                height: 50,
-                width: 250,
-                child: ElevatedButton(
-                    style: ButtonStyle(
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(22.0),
-                                    side: BorderSide(color: Colors.red)))),
-                    onPressed: () {},
-                    child: Text(
-                      "Save",
-                      style: TextStyle(fontSize: 25),
-                    )))
+            ButtonWidget(
+              text: 'Save',
+              onClicked: () {
+                UserPreferences.setUser(user);
+                Navigator.of(context).pop();
+              },
+            ),
           ],
         ),
       ),

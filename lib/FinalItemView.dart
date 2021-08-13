@@ -349,7 +349,7 @@ _buildFinalItemView(BuildContext context, String itemFinalImgPath,
                           style: GoogleFonts.firaSans(
                             decoration: TextDecoration.none,
                             color: Colors.black54,
-                            fontSize: 50,
+                            fontSize: 40,
                             fontWeight: FontWeight.w500,
                           )),
                       Padding(
@@ -424,7 +424,7 @@ _buildFinalItemView(BuildContext context, String itemFinalImgPath,
                               style: TextStyle(
                                   decoration: TextDecoration.none,
                                   color: Colors.white,
-                                  fontSize: 17),
+                                  fontSize: 12),
                             ),
                           ),
                         ),
@@ -456,55 +456,59 @@ _buildFinalItemView(BuildContext context, String itemFinalImgPath,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 15.0),
-                        child: Container(
-                          width: MediaQuery.of(context).size.width / 2.2,
-                          height: 52,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            color: Colors.lightGreen,
-                          ),
-                          child: Center(
-                            child: Text("Add to Cart",
-                                style: GoogleFonts.firaSans(
-                                  decoration: TextDecoration.none,
-                                  fontSize: 20,
-                                  color: Colors.white,
-                                  //
-                                )),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 15.0),
-                        child: GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ItemFinalandPayment(
-                                        kItemName,
-                                        kItemPrice,
-                                        itemFinalImgPath)));
-                          },
-                          child: Container(
-                            width: MediaQuery.of(context).size.width / 2.2,
-                            height: 52,
-                            decoration: BoxDecoration(
-                                color: Colors.lightGreen,
-                                borderRadius: BorderRadius.circular(15)),
-                            child: Center(
-                              child: Text("Buy the Item",
-                                  style: GoogleFonts.firaSans(
-                                    decoration: TextDecoration.none,
-                                    fontSize: 20,
-                                    color: Colors.white,
-                                    //
-                                  )),
+                          padding: const EdgeInsets.only(left: 15.0),
+                          child:
+                              //   child: Container(
+                              //     width: MediaQuery.of(context).size.width / 2.2,
+                              //     height: 52,
+                              //     decoration: BoxDecoration(
+                              //       borderRadius: BorderRadius.circular(15),
+                              //       color: Colors.lightGreen,
+                              //     ),
+                              //     child: Center(
+                              //       child: Text("Add to Cart",
+                              //           style: GoogleFonts.firaSans(
+                              //             decoration: TextDecoration.none,
+                              //             fontSize: 20,
+                              //             color: Colors.white,
+                              //             //
+                              //           )),
+                              //     ),
+                              //   ),
+                              // ),
+                              Padding(
+                            padding: const EdgeInsets.only(right: 15.0),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            ItemFinalandPayment(kItemName,
+                                                kItemPrice, itemFinalImgPath)));
+                              },
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 100.0),
+                                child: Container(
+                                  width:
+                                      MediaQuery.of(context).size.width / 2.2,
+                                  height: 52,
+                                  decoration: BoxDecoration(
+                                      color: Colors.lightGreen,
+                                      borderRadius: BorderRadius.circular(15)),
+                                  child: Center(
+                                    child: Text("Buy the Item",
+                                        style: GoogleFonts.firaSans(
+                                          decoration: TextDecoration.none,
+                                          fontSize: 20,
+                                          color: Colors.white,
+                                          //
+                                        )),
+                                  ),
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
-                      )
+                          ))
                     ],
                   ),
                 ),
@@ -558,8 +562,8 @@ class _ItemFinalandPaymentState extends State<ItemFinalandPayment> {
     var options = {
       'key': 'rzp_test_xXcz1iL0ZaiWj9',
       'amount': widget.lItemPrice + '00',
-      'name': 'Lokesh',
-      'description': '1Kg ' + widget.lItemName,
+      'name': widget.lItemName,
+      'description': '1Kg will be delivered to your address',
       'prefill': {
         'contact': '8239479183',
         'email': 'yogilokesh@gmail.com',
@@ -591,7 +595,7 @@ class _ItemFinalandPaymentState extends State<ItemFinalandPayment> {
         ),
         elevation: 0,
       ),
-      body: Column(
+      body: ListView(
         children: [
           SizedBox(
             height: 20,
@@ -600,7 +604,7 @@ class _ItemFinalandPaymentState extends State<ItemFinalandPayment> {
             padding: const EdgeInsets.only(left: 10.0, right: 220),
             child: Text("Checkout",
                 style: GoogleFonts.nunitoSans(
-                    fontSize: 35,
+                    fontSize: 30,
                     color: Colors.blue[900],
                     fontWeight: FontWeight.bold)),
           ),
@@ -749,7 +753,7 @@ class _ItemFinalandPaymentState extends State<ItemFinalandPayment> {
                             color: Colors.blue[500],
                             fontSize: 20,
                             fontWeight: FontWeight.bold),
-                      )
+                      ),
                     ],
                   )
                 ],
@@ -757,8 +761,11 @@ class _ItemFinalandPaymentState extends State<ItemFinalandPayment> {
             ),
           ),
           SizedBox(
+            height: 30,
+          ),
+          SizedBox(
             height: 50,
-            width: 300,
+            width: 200,
             child: ElevatedButton(
               onPressed: () {
                 openCheckout();
@@ -776,7 +783,10 @@ class _ItemFinalandPaymentState extends State<ItemFinalandPayment> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30))),
             ),
-          )
+          ),
+          SizedBox(
+            height: 30,
+          ),
         ],
       ),
     );

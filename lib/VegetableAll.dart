@@ -114,7 +114,7 @@ class _VegetableAllState extends State<VegetableAll> {
               ),
             ),
             Container(
-              height: 260,
+              height: 261,
               width: MediaQuery.of(context).size.width,
               child: Row(
                 children: [
@@ -143,8 +143,8 @@ _buildListItem(BuildContext context, String imgPath, String price,
           MaterialPageRoute(builder: (BuildContext context) => classPath));
     },
     child: Container(
-      height: 260,
-      width: 205,
+      height: 261,
+      width: MediaQuery.of(context).size.width / 2,
       decoration: BoxDecoration(
           border: Border(
         bottom: BorderSide(color: Colors.black12, width: 1.0),

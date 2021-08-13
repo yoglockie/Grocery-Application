@@ -145,7 +145,7 @@ _buildListItem(BuildContext context, String imgPath, String price,
     },
     child: Container(
       height: 260,
-      width: 205,
+      width: MediaQuery.of(context).size.width / 2,
       decoration: BoxDecoration(
           border: Border(
         bottom: BorderSide(color: Colors.black12, width: 1.0),
