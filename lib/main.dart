@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:google_fonts/google_fonts.dart';
 import 'package:major_project/Home_Screen.dart';
 import 'package:major_project/login_page.dart';
