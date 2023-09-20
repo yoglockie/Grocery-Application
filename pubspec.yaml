@@ -30,15 +30,16 @@ dependencies:
   cupertino_icons: ^1.0.2
   
   font_awesome_flutter:
-  google_fonts:
-  firebase_core: "^1.4.0"
-  firebase_auth: "^3.0.1" 
+  google_fonts: ^6.0.0
+  firebase_core: ^2.16.0
+  firebase_auth: ^4.10.0
   flutter_secure_storage:   
   razorpay_flutter:
   path_provider:
   image_picker:
   shared_preferences:
-  animated_theme_switcher:  
+  animated_theme_switcher:
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -48,10 +49,6 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
-
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
